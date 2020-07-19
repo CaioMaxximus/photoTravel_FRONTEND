@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 const background = require('../../pictures/antoine-julien-r9QZo2VJx6w-unsplash.jpg')
-const logo = require('../../pictures/logo_size.jpg')
+const logo = require('../../pictures/InfiteTravelLogoNotBackground.png')
 const panelImg1 = require('../../pictures/mostafa-meraji-l7mA-KmHXnc-unsplash.jpg')
 const panelImg2 = require('../../pictures/mostafa-meraji-TtWStH-JuL8-unsplash.jpg')
 const panelImg3 = require('../../pictures/mostafa-meraji-Z_WogC_UONo-unsplash.jpg')
@@ -17,7 +17,6 @@ function Home() {
                 <img src={background} alt="background" />
             </div>
             <div id="header">
-                <div id="name"> InfiniteTravel</div>
                 <div id="logo">
                     <img src={logo} alt="InfiniteTravelLogo"></img>
                 </div>
