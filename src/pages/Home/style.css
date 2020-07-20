@@ -1,14 +1,14 @@
-#header{
+#header {
     position: relative;
     top: 0px;
     width: 100%;
     height: 250px;
     align-items: center;
-    font-family: 'Oswald', sans-serif; 
+    font-family: 'Oswald', sans-serif;
     display: block;
     /* font-family: 'Roboto Mono', monospace; */
-
 }
+
 /* #name{
     margin-top: 5%;
     margin-left: 3%;
@@ -17,7 +17,8 @@
     height: 100%;
     position: relative;
 } */
-#logo{
+
+#logo {
     position: relative;
     z-index: 0;
     width: 425px;
@@ -28,26 +29,23 @@
 #logo img {
     width: 100%;
     height: 100%;
-    position: relative;;
+    position: relative;
+    ;
 }
 
-
 #background {
-
     width: 100%;
     height: 100%;
     z-index: -1;
     position: fixed;
-
 }
 
-#background img{
+#background img {
     width: 100%;
     height: 100%;
 }
 
-.content{
-
+.content {
     background-color: aliceblue;
     border-radius: 8px;
     width: 60%;
@@ -57,8 +55,7 @@
     opacity: 0.8;
 }
 
-.panel{
-
+.panel {
     width: 95%;
     margin-top: 200px;
     height: auto;
@@ -67,14 +64,55 @@
     position: relative;
     opacity: 0.8;
 }
-.panel img{
+
+.panel img {
     width: 48%;
     height: 400px;
     margin: 1%;
     opacity: 1;
 }
 
-.panel:hover{
+.panel:hover {
     background-color: black;
 }
 
+#tools-bar {
+    height: 25px;
+    margin: 20px 40%;
+    position: relative;
+    display: block;
+}
+
+
+.menu {
+    position: relative;
+    list-style: none;
+    border: 1px solid black;
+    float: left;
+    height: auto;
+    margin: 0px; padding: 0px;
+    
+}
+
+.menu li {
+    float: left;
+    margin: 4px;
+    position: relative;  
+
+}
+
+.menu li ul {
+    position: absolute;
+    display: none;
+    top: 25px;
+    margin: 0px; padding: 0px;
+}
+
+.menu li:hover ul, .menu li.over ul {
+    display: block;
+}
+
+.menu li ul li {
+    display: block;
+    width: 150px;
+}

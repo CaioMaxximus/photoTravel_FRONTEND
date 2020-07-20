@@ -21,6 +21,29 @@ function Home() {
                     <img src={logo} alt="InfiniteTravelLogo"></img>
                 </div>
             </div>
+            <div id="tools-bar">
+                <nav>
+                    <ul className ="menu">
+                        <li>
+                            <button>Home</button>
+                        </li>
+                        <li>
+                            <button>Gallery</button>
+                        </li>
+                        <li><button>About</button> 
+                            <ul>
+                                <li>
+                                    <button>Who are we?</button>
+                                </li>
+                                <li>
+                                    <button>Contact</button>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
 
 
             <div className="panel">
@@ -30,7 +53,7 @@ function Home() {
                 <img src={panelImg4} alt="" />
             </div>
 
-            <div class="content">
+            <div className="content">
                 adasdadasda
                 dasdad
                 dadasda
