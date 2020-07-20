@@ -77,37 +77,52 @@
 }
 
 #tools-bar {
-    height: 25px;
-    margin: 20px 40%;
+    height: 60px;
+    margin: 20px 25%;
     position: relative;
+    width: 50%;
     display: block;
+
 }
 
+nav{
+    width: 100%;
+    height: auto;
+    margin: 0px;padding: 0px;
+    position: relative;
+}
 
 .menu {
+    
     position: relative;
     list-style: none;
     border: 1px solid black;
-    float: left;
     height: auto;
+    width: 100%;
     margin: 0px; padding: 0px;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+
 }
 
 .menu li {
-    float: left;
-    margin: 4px;
-    position: relative;  
+    margin : 2px;
+    position: relative;
 
 }
 
 .menu li ul {
     position: absolute;
     display: none;
-    top: 25px;
+    top: 33px;
+    width: 100%;
     margin: 0px; padding: 0px;
 }
 
+.menu li ul li{
+    width: 100%;
+
+}
 .menu li:hover ul, .menu li.over ul {
     display: block;
 }
@@ -115,4 +130,19 @@
 .menu li ul li {
     display: block;
     width: 150px;
+}
+
+.menu button{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    background-color: white;
+    opacity: 0.7;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 100%;
+}
+.menu button:hover{
+    background-color: black;
+    color: aliceblue;
+    opacity: 1;
 }
