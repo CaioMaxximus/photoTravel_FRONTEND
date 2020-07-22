@@ -1,18 +1,13 @@
 import React from 'react'
-import './style.css'
-const background = require('../../pictures/antoine-julien-r9QZo2VJx6w-unsplash.jpg')
-const logo = require('../../pictures/InfiteTravelLogoNotBackground.png')
-const panelImg1 = require('../../pictures/mostafa-meraji-l7mA-KmHXnc-unsplash.jpg')
-const panelImg2 = require('../../pictures/mostafa-meraji-TtWStH-JuL8-unsplash.jpg')
-const panelImg3 = require('../../pictures/mostafa-meraji-Z_WogC_UONo-unsplash.jpg')
-const panelImg4 = require('../../pictures/svetlana-gumerova-CPJ1yQSa3L0-unsplash.jpg')
+import Home from './views/Home/Home'
+import './App.css'
+const background = require('./pictures/antoine-julien-r9QZo2VJx6w-unsplash.jpg')
+const logo = require('./pictures/InfiteTravelLogoNotBackground.png')
 
-function Home() {
-
+function App() {
 
     return (
         <div>
-
             <div id="background">
                 <img src={background} alt="background" />
             </div>
@@ -23,14 +18,14 @@ function Home() {
             </div>
             <div id="tools-bar">
                 <nav>
-                    <ul className ="menu">
+                    <ul className="menu">
                         <li>
                             <button>Home</button>
                         </li>
                         <li>
                             <button>Gallery</button>
                         </li>
-                        <li><button>About</button> 
+                        <li><button>About</button>
                             <ul>
                                 <li>
                                     <button>Who are we?</button>
@@ -44,21 +39,10 @@ function Home() {
                     </ul>
                 </nav>
             </div>
-
-
-            <div className="panel">
-                <img src={panelImg1} alt="" />
-                <img src={panelImg2} alt="" />
-                <img src={panelImg3} alt="" />
-                <img src={panelImg4} alt="" />
-            </div>
-
-            <div className="content">
-                adasdadasda
-                dasdad
-                dadasda
+            <Home></Home>
         </div>
-        </div>)
+        )
+
 }
 
-export default Home
+export default App

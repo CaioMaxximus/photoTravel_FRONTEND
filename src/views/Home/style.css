@@ -1,0 +1,68 @@
+
+/* #name{
+    margin-top: 5%;
+    margin-left: 3%;
+    width: 100%;    
+    text-align: center;
+    height: 100%;
+    position: relative;
+} */
+
+#logo {
+    position: relative;
+    z-index: 0;
+    width: 425px;
+    height: 100%;
+    margin: 0px auto;
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    ;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+}
+
+#background img {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    background-color: aliceblue;
+    border-radius: 8px;
+    width: 60%;
+    height: 1000px;
+    font-size: 18px;
+    margin: 100px 20% 100px 20%;
+    opacity: 0.8;
+}
+
+.panel {
+    width: 95%;
+    margin-top: 200px;
+    height: auto;
+    padding: 2.5%;
+    background-color: floralwhite;
+    position: relative;
+    opacity: 0.8;
+}
+
+.panel img {
+    width: 48%;
+    height: 400px;
+    margin: 1%;
+    opacity: 1;
+}
+
+.panel:hover {
+    background-color: black;
+}
+
