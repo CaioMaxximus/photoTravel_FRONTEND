@@ -9,7 +9,7 @@ const panelImg4 = require('../../pictures/svetlana-gumerova-CPJ1yQSa3L0-unsplash
 function Home() {
 
 
-    return (<div>
+    return (<div id = "homepage">
 
 
         <div className="panel">

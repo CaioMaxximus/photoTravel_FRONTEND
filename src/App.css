@@ -79,3 +79,8 @@ nav{
     color: white;
     opacity: 1;
 }
+
+.views{
+    height: auto;
+    width: auto;
+}
