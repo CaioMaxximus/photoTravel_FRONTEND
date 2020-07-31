@@ -28,7 +28,7 @@ function App() {
                     <nav>
                         <ul className="menu">
                             <li>
-                                <NavLink to="/home"><button>Home</button></NavLink>
+                                <NavLink to="/"><button>Home</button></NavLink>
                             </li>
                             <li>
                                 <NavLink to="/gallery"><button >Gallery</button></NavLink>
@@ -48,7 +48,7 @@ function App() {
                     </nav>
                 </div>
                 <div className="views">
-                    <Route exact path="/home" component={Home}></Route>
+                    <Route exact path="/" component={Home}></Route>
                     <Route path="/gallery" component={Gallery}></Route>
                     {/* <Route path="we"  component = {}></Route>
                 <Route path="contact" component = {} ></Route> */}
