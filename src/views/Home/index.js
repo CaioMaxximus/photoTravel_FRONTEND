@@ -1,10 +1,10 @@
 import React from 'react'
 import './style.css'
 
-const panelImg1 = require('../../assets/pictures/mostafa-meraji-l7mA-KmHXnc-unsplash.jpg')
-const panelImg2 = require('../../assets/pictures/mostafa-meraji-TtWStH-JuL8-unsplash.jpg')
-const panelImg3 = require('../../assets/pictures/mostafa-meraji-Z_WogC_UONo-unsplash.jpg')
-const panelImg4 = require('../../assets/pictures/svetlana-gumerova-CPJ1yQSa3L0-unsplash.jpg')
+const panelImg1 = require('../../assets/images/mostafa-meraji-l7mA-KmHXnc-unsplash.jpg')
+const panelImg2 = require('../../assets/images/mostafa-meraji-TtWStH-JuL8-unsplash.jpg')
+const panelImg3 = require('../../assets/images/mostafa-meraji-Z_WogC_UONo-unsplash.jpg')
+const panelImg4 = require('../../assets/images/svetlana-gumerova-CPJ1yQSa3L0-unsplash.jpg')
 
 function Home() {
 

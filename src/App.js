@@ -3,13 +3,13 @@ import React from 'react'
 import './App.css'
 // import { createHashHistory } from 'history'
 import { Route, NavLink, HashRouter } from 'react-router-dom'
-import Home from './views/Home/Home'
-import Gallery from './views/Gallery/Gallery'
+import Home from './views/Home'
+import Gallery from './views/Gallery'
 // const history = createHashHistory()
 
 
-const background = require('./pictures/antoine-julien-r9QZo2VJx6w-unsplash.jpg')
-const logo = require('./pictures/InfiteTravelLogoNotBackground.png')
+const background = require('./assets/images/antoine-julien-r9QZo2VJx6w-unsplash.jpg')
+const logo = require('./assets/images/InfiteTravelLogoNotBackground.png')
 function App() {
 
 
@@ -19,7 +19,7 @@ function App() {
                 <img src={background} alt="background" />
             </div>
             <div id="header">
-                <div id="logo">
+                <div id="logo"> 
                     <img src={logo} alt="InfiniteTravelLogo"></img>
                 </div>
             </div>
