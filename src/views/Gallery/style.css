@@ -1,0 +1,28 @@
+#gallery-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#gallery-page .images-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+#gallery-page .images-container .column-image {
+    width: 100%;
+    /* display: grid;  
+    grid-template-columns: 1fr;
+    grid-gap: 1.2rem; */
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+#gallery-page .images-container .column-image img {
+    width: 100%;
+    max-height: 600px;
+    margin: 0.8rem 0;
+}

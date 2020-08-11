@@ -1,21 +1,27 @@
 :root{
-    --color-primary-buttons : rgb(214, 202, 202);
-    --color-secundary-buttons: rgb(24, 23, 23);
+    --color-primary-button: #1a1d1a;
+    --color-secundary-button : #f0efef;
+    --color-primary-buttons : #d6caca;
+    --color-secundary-buttons: #a4aaa5;
     --color-midle-green :  #8BB485;
     --color-darker-green : #3E4A3C;
-    --color-midle-grey :#A2AF9F;
+    --color-background-white: #ffffff;
+    --color-background-lighter-grey: #e2e0e0;
+    --color-background-midle-grey :#A2AF9F;
     --color-lighter-blue : #57B5D2;
-    --clor-darker-blue: #00809B ;
+    --color-darker-blue: #00809B ;
 
 
  
 }
+
 
 body , #root{ 
     margin :0;
     padding: 0 ;
     align-items: center;
     justify-content: center;
+    background-color: var(--color-background-lighter-grey);
 }
 
 

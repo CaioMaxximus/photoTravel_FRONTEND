@@ -9,6 +9,22 @@
     /* font-family: 'Roboto Mono', monospace; */
 }
 
+
+#logo {
+    position: relative;
+    z-index: 0;
+    width: 425px;
+    height: 100%;
+    margin: 0px auto;
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    ;
+}
+
 #tools-bar {
     height: 60px;
     margin: 20px 25%;
@@ -29,7 +45,7 @@ nav{
     
     position: relative;
     list-style: none;
-    border: 1px solid black;
+    border: 1px solid var(--color-primary-button);
     height: auto;
     width: 100%;
     margin: 0px; padding: 0px;
@@ -68,19 +84,24 @@ nav{
 .menu button{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 25px;
-    background-color: white;
-    opacity: 0.7;
-    border: 1px solid black;
+    background-color: var(--color-primary-button );
+    border: 1px solid var(--color-secundary-button);
+    color: var(--color-secundary-button);
     border-radius: 4px;
     width: 100%;
+    transition: 0.3s;
 }
 .menu button:hover{
-    background-color: black;
-    color: white;
+    background-color: var(--color-secundary-button);
+    color:var(--color-primary-button);
+    border: 2px solid var(--color-primary-button);
     opacity: 1;
 }
 
 .views{
     height: auto;
-    width: auto;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 8.5rem;
+
 }

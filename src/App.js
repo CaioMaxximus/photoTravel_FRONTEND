@@ -15,9 +15,7 @@ function App() {
 
     return (
         <div>
-            <div id="background">
-                <img src={background} alt="background" />
-            </div>
+            
             <div id="header">
                 <div id="logo"> 
                     <img src={logo} alt="InfiniteTravelLogo"></img>
