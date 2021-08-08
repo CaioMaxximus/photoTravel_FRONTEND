@@ -1,8 +1,8 @@
 :root{
     --color-primary-button: #1a1d1a;
     --color-secundary-button : #f0efef;
-    --color-primary-buttons : #d6caca;
-    --color-secundary-buttons: #a4aaa5;
+    --color-primary-panel : #d6caca;
+    --color-secundary-panel: #a4aaa5;
     --color-midle-green :  #8BB485;
     --color-darker-green : #3E4A3C;
     --color-background-white: #ffffff;
@@ -11,8 +11,6 @@
     --color-lighter-blue : #57B5D2;
     --color-darker-blue: #00809B ;
 
-
- 
 }
 
 
@@ -22,6 +20,10 @@ body , #root{
     align-items: center;
     justify-content: center;
     background-color: var(--color-background-lighter-grey);
+}
+
+p{
+    font: 32px sans-serif 300 ;
 }
 
 

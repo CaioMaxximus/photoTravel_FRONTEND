@@ -9,21 +9,33 @@ const panelImg4 = require('../../assets/images/svetlana-gumerova-CPJ1yQSa3L0-uns
 function Home() {
 
 
-    return (<div id = "homepage">
+    return (<div id="homepage">
 
-
-        <div className="panel">
-            <img src={panelImg1} alt="" />
-            <img src={panelImg2} alt="" />
-            <img src={panelImg3} alt="" />
-            <img src={panelImg4} alt="" />
-        </div>
 
         <div className="content">
-            adasdadasda
-            dasdad
-            dadasda
+
+            <h1>Welcome to our web page!</h1>
+            <h2>We're a company focused in facilitate your travel program! Enjoy us!!</h2>
+
+            <div className="content-section">
+                <p>
+                    We work in program the best route to each kind of people. 
+                    Hotel, fly time, 
+                </p>
+            </div>
+
+
+
+            <div className="panel">
+                <img src={panelImg1} alt="" />
+                <img src={panelImg2} alt="" />
+                <img src={panelImg3} alt="" />
+                <img src={panelImg4} alt="" />
+            </div>
         </div>
+
+
+
     </div>)
 }
 

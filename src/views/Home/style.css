@@ -9,7 +9,7 @@
 } */
 
 #homepage{
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
@@ -17,33 +17,40 @@
 
 
 .content {
-    background-color: aliceblue;
+    background-color: var(--color-background-white);
     border-radius: 8px;
-    width: 60%;
-    height: 1000px;
-    font-size: 18px;
-    margin: 100px 20% 100px 20%;
-    opacity: 0.8;
+    width: auto;
+    margin: 25px auto;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding : 2.3rem;
+}
+.content h1{
+    font : 4.5rem/6.3rem bold serif;
 }
 
 .panel {
-    width: 95%;
     /* margin-top: 200px; */
     height: auto;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
     padding: 2.5%;
-    background-color: floralwhite;
+    margin: 2.3rem;
+    background-color: var(--color-secundary-panel);
     position: relative;
-    opacity: 0.8;
+    opacity: 0.9;
+
 }
 
 .panel img {
-    width: 48%;
-    height: 400px;
+    max-height: 400px;
+    max-width: 600px;
     margin: 1%;
-    opacity: 1;
 }
 
 .panel:hover {
-    background-color: black;
+    opacity: 1;
 }
 

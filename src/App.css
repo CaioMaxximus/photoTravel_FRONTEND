@@ -27,7 +27,7 @@
 
 #tools-bar {
     height: 60px;
-    margin: 20px 25%;
+    margin: 20px auto;
     position: relative;
     width: 50%;
     display: block;
