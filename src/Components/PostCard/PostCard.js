@@ -1,14 +1,17 @@
 import React  from 'react';
+import './style.css'
 
 export default function postCard(props){
 
-    let user_nick, imageUrl = {props}
+    let {imageUrl} = props.props;
+    console.log(props.props);
+    console.log(imageUrl);
 
 
 
     return  <div className = "post_card">
         {/* <header>${post_name}</header> */}
-        <img src= {imageUrl} alt={ user_nick}/>
+        <img src= {imageUrl} />
         {/* <footer>by : {user_nick}</footer> */}
     </div>
 }

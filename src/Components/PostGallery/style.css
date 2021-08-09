@@ -4,13 +4,16 @@
 }
 
 .images-container{
-    column-count: 2;
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    
 }
 
 .post-unit{
-    margin: 10px;
-    max-height: 200px;
-    min-height: 150px;
+    border: 1px rgb(186, 201, 230) solid;
+    border-radius: 1rem;
+    max-height: 300px;
+    position: relative;
 }
