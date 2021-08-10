@@ -1,4 +1,5 @@
 import React from 'react'
+import PostCreator from '../../Components/PostCreator/PostCreator'
 import './style.css'
 
 const panelImg1 = require('../../assets/images/mostafa-meraji-l7mA-KmHXnc-unsplash.jpg')
@@ -13,6 +14,8 @@ function Home() {
 
 
         <div className="content">
+
+            <PostCreator> </PostCreator>
 
             <h1>Welcome to our web page!</h1>
             <h2>We're a company focused in facilitate your travel program! Enjoy us!!</h2>

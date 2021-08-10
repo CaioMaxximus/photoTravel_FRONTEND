@@ -5,6 +5,8 @@ import './App.css'
 import { Route, NavLink, HashRouter } from 'react-router-dom'
 import Home from './views/Home'
 import Gallery from './views/Gallery'
+import Register from './views/Register'
+import Login from './views/Login'
 // const history = createHashHistory()
 
 
@@ -15,9 +17,9 @@ function App() {
 
     return (
         <div>
-            
+
             <div id="header">
-                <div id="logo"> 
+                <div id="logo">
                     <img src={logo} alt="InfiniteTravelLogo"></img>
                 </div>
             </div>
@@ -50,7 +52,10 @@ function App() {
                     <Route path="/gallery" component={Gallery}></Route>
                     {/* <Route path="we"  component = {}></Route>
                 <Route path="contact" component = {} ></Route> */}
+                    <Route path="/register" component={Register}></Route>
+                    <Route path = "/login" component = { Login }></Route>
                 </div>
+
             </HashRouter>
         </div>
     )

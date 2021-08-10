@@ -1,0 +1,41 @@
+#register {
+    width: 60%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+#register .content{
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+
+}
+
+#register .content .form-user-area #in-first-step{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+#register .content .form-user-area #in-first-step label{
+    margin-bottom: 0.5em;
+    
+}
+
+#register .content .form-user-area #in-first-step input{
+    margin-bottom: 1em;
+
+}
+
+#register .content #in-secod-step{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top : 0;
+}
