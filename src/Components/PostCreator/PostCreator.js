@@ -6,15 +6,20 @@ import React, {useState} from  'react'
 export default function PostCreator(){
 
 
-    let tags, setTags = useState([]);
-    let tagString , setTagString = useState("");
+    let [tags, setTags] = useState([]);
+    let [tagString , setTagString] = useState("");
 
     function tagsMarker(e){
 
-        ;
-        for (let tag in  tagString.split(" ")){
-            tags.push(tag);
+        console.log(e.target.value)
+        setTagString(e.target.value);
+        let local_tags = tagString.split(" ");
+        let exit = []
+        for (var i = 0 ; i <= local_tags.length; i++){
+            exit.push(local_tags[i]);
+
         } 
+        setTags(exit);
     }
 
     return (<div id = "post-creator">
@@ -26,10 +31,10 @@ export default function PostCreator(){
                 <textarea name="" id="" cols="30" rows="10" 
                 placeholder = "put each tag separated for space"
                  onChange ={(e)=>
-                setTagString(e.target.value)}
+                    tagsMarker(e)}
                  value = {tagString}
                 ></textarea>
-                <div id = "tags-area">{tags}</div>
+                <div id = "tags-area">{tags.map(tag => <button className = "tag-miniature-creation">{tag}</button>)}</div>
             </div>
         </div>
     </div>)
