@@ -17,35 +17,33 @@ export default function PostCreator() {
         let inp = e.target.value.split(" ");
         let len = inp.length - 1;
         setActualTag(inp[len])
-        console.log({inp})
-        console.log({tags })
-        if(inp.length >  1){
+        console.log({ inp })
+        console.log({ tags })
+        if (inp.length > 1) {
             let local_tags = tags;
             local_tags.push(inp[0]);
             setTags(local_tags);
         }
-        
 
-        
+
+
     }
 
-    return (<div id="post-creator">e
-
+    return (<div id="post-creator">
         {/* trocar por form talvez */}
         <div className="content">
-            <div id="form">
+            <form action="">
                 <label htmlFor="link">ImageLink:</label>
                 <input name="link" type="text" />
                 <label htmlFor="tags">Add some tags to you image..</label>
-    
-                    <div id = "tags-creator">
-                        <div id="tags-area">{tags.map(tag => <button className="tag-miniature-creation">{tag}</button>)}</div>
-                        <input type="text" onChange={(e) =>
+                <div id="tags-creator">
+                    <div id="tags-area">{tags.map(tag => <button className="tag-miniature-creation">{tag}</button>)}</div>
+                    <input type="text" onChange={(e) =>
                         tagsMarker(e)}
-                        value={actualTag}/>
-                    </div>
-                
-            </div>
-            </div>
-        </div>)
+                        value={actualTag} />
+                </div>
+
+            </form>
+        </div>
+    </div>)
 }
