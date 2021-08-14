@@ -1,33 +1,73 @@
 #header {
-    position: relative;
-    top: 0px;
-    margin : 0 ;
-    width: 80%;
-    height: 4.5rem;
-    align-items: flex-start;
+        top: 0px;
+    margin: 0;
+    width: 100%;
+    height: 3.5rem;
+    align-items: center;
     justify-content: center;
     font-family: 'Oswald', sans-serif;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr 1fr;
     position: fixed;
     background-color: var(--color-midle-green);
-    border-radius: 8px;
     border: solid 1px black;
     /* font-family: 'Roboto Mono', monospace; */
 }
 
-
 #logo {
-    z-index: 0;
+    z-index: 0; 
     width: 80%;
-    height: 4.5rem;
+    height: inherit;
     margin: 0 auto;
 }
 
 #logo img {
     width: 100%;
     height: 100%;
-    
+}
+
+#search-bar {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 7fr 0.5fr;
+    height: inherit;
+    width: 90%;
+    margin: 0 auto;
+
+}
+#search-bar #search-options {
+    height: inherit;
+}
+
+#search-bar #search-options ul {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    top: 3.5rem;
+
+}
+#search-bar #search-options ul{
+    display: none;
+} 
+
+
+
+#search-bar #search-options:hover ul, #search-bar #search-options .over ul{
+        display: grid;
+}
+
+
+#search-bar #search-options ul li {
+    padding: 0;
+    margin: 3px;
+}
+
+#search-bar input{
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 #tools-bar {
@@ -36,12 +76,11 @@
     position: relative;
     align-self: center;
     justify-self: center;
-    width: 50%;
+    width: 90%;
     display: block;
-
 }
 
-nav{
+nav {
     width: 100%;
     height: auto;
     margin: 0px;
@@ -50,22 +89,20 @@ nav{
 }
 
 .menu {
-    
     position: relative;
     list-style: none;
     border: 1px solid var(--color-primary-button);
     height: auto;
     width: 100%;
-    margin: 0px; padding: 0px;
+    margin: 0px;
+    padding: 0px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .menu li {
-    margin : 2px;
+    margin: 2px;
     position: relative;
-
 }
 
 .menu li ul {
@@ -73,13 +110,14 @@ nav{
     display: none;
     top: 33px;
     width: 100%;
-    margin: 0px; padding: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
-.menu li ul li{
+.menu li ul li {
     width: 100%;
-
 }
+
 .menu li:hover ul, .menu li.over ul {
     display: block;
 }
@@ -89,27 +127,27 @@ nav{
     width: 150px;
 }
 
-.menu button{
+.menu button {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 25px;
-    background-color: var(--color-primary-button );
+    background-color: var(--color-primary-button);
     border: 1px solid var(--color-secundary-button);
     color: var(--color-secundary-button);
     border-radius: 4px;
     width: 100%;
     transition: 0.3s;
 }
-.menu button:hover{
+
+.menu button:hover {
     background-color: var(--color-secundary-button);
-    color:var(--color-primary-button);
+    color: var(--color-primary-button);
     border: 2px solid var(--color-primary-button);
     opacity: 1;
 }
 
-.views{
+.views {
     height: auto;
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
-    margin-top: 8.5rem;
-
+    margin-top: 7.5rem;
 }

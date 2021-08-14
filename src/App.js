@@ -22,6 +22,20 @@ function App() {
                 <div id="logo">
                     <img src={logo} alt="InfiniteTravelLogo"></img>
                 </div>
+
+                <div id="search-bar">
+                    <div id="search-options">Users
+                        <ul>
+                            <li><button>users</button></li>
+                            <li><button>posts</button></li>
+                        </ul>
+                    </div>
+                    <input type="text" placeholder="search.." />
+
+                    <div>
+                        Search
+                    </div>
+                </div>
                 <HashRouter>
                     <div id="tools-bar">
                         <nav>
