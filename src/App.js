@@ -22,41 +22,44 @@ function App() {
                 <div id="logo">
                     <img src={logo} alt="InfiniteTravelLogo"></img>
                 </div>
-            </div>
-            <HashRouter>
-                <div id="tools-bar">
-                    <nav>
-                        <ul className="menu">
-                            <li>
-                                <NavLink to="/"><button>Home</button></NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/gallery"><button >Gallery</button></NavLink>
-                            </li>
-                            <li><button>About</button>
-                                <ul>
-                                    <li>
-                                        <NavLink to="/we"><button>Who are we?</button></NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink to="/contact"><button>Contact</button></NavLink>
-                                    </li>
-                                </ul>
-                            </li>
+                <HashRouter>
+                    <div id="tools-bar">
+                        <nav>
+                            <ul className="menu">
+                                <li>
+                                    <NavLink to="/"><button>Home</button></NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/gallery"><button >Gallery</button></NavLink>
+                                </li>
+                                <li><button>About</button>
+                                    <ul>
+                                        <li>
+                                            <NavLink to="/we"><button>Who are we?</button></NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink to="/contact"><button>Contact</button></NavLink>
+                                        </li>
+                                    </ul>
+                                </li>
 
-                        </ul>
-                    </nav>
-                </div>
-                <div className="views">
+                            </ul>
+                        </nav>
+                    </div>
+
+                </HashRouter>
+            </div>
+            <div className="views">
+                <HashRouter>
                     <Route exact path="/" component={Home}></Route>
                     <Route path="/gallery" component={Gallery}></Route>
                     {/* <Route path="we"  component = {}></Route>
                 <Route path="contact" component = {} ></Route> */}
                     <Route path="/register" component={Register}></Route>
-                    <Route path = "/login" component = { Login }></Route>
-                </div>
+                    <Route path="/login" component={Login}></Route>
+                </HashRouter>
+            </div>
 
-            </HashRouter>
         </div>
     )
 

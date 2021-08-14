@@ -1,34 +1,41 @@
 #header {
     position: relative;
     top: 0px;
-    width: 100%;
-    height: 250px;
-    align-items: center;
+    margin : 0 ;
+    width: 80%;
+    height: 4.5rem;
+    align-items: flex-start;
+    justify-content: center;
     font-family: 'Oswald', sans-serif;
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    position: fixed;
+    background-color: var(--color-midle-green);
+    border-radius: 8px;
+    border: solid 1px black;
     /* font-family: 'Roboto Mono', monospace; */
 }
 
 
 #logo {
-    position: relative;
     z-index: 0;
-    width: 425px;
-    height: 100%;
-    margin: 0px auto;
+    width: 80%;
+    height: 4.5rem;
+    margin: 0 auto;
 }
 
 #logo img {
     width: 100%;
     height: 100%;
-    position: relative;
-    ;
+    
 }
 
 #tools-bar {
-    height: 60px;
-    margin: 20px auto;
+    height: 100%;
+    margin: 0 auto;
     position: relative;
+    align-self: center;
+    justify-self: center;
     width: 50%;
     display: block;
 
@@ -37,7 +44,8 @@
 nav{
     width: 100%;
     height: auto;
-    margin: 0px;padding: 0px;
+    margin: 0px;
+    padding: 0px;
     position: relative;
 }
 
