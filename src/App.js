@@ -15,6 +15,8 @@ const logo = require('./assets/images/InfiteTravelLogoNotBackground.png')
 function App() {
 
 
+
+
     return (
         <div>
 
@@ -30,11 +32,11 @@ function App() {
                             <li><button>posts</button></li>
                         </ul>
                     </div>
-                    <input type="text" placeholder="search.." />
+                    <input type="text" placeholder="Search.." />
 
-                    <div>
+                    <button>
                         Search
-                    </div>
+                    </button>
                 </div>
                 <HashRouter>
                     <div id="tools-bar">
