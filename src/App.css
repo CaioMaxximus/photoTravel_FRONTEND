@@ -1,7 +1,7 @@
 #header {
-        top: 0px;
-    margin: 0;
-    width: 100%;
+    top: 0px;
+    margin: 0 auto;
+    width: 98%;
     height: 3rem;
     align-items: center;
     justify-content: center;
@@ -9,10 +9,14 @@
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
     position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
     background-color: var(--color-lighter-blue);
     border: solid 1px black;
     box-shadow: 0px 1px 4px ;
     /* font-family: 'Roboto Mono', monospace; */
+    z-index: 3;
+    border: 8px;
 }
 
 #logo {
@@ -82,7 +86,7 @@
 #search-bar input{
     height: auto;
     margin: 0;
-    color: var(--color-secundary-panel);
+    color: black;
     font-size: 1rem;
     border: none;
     
@@ -90,7 +94,9 @@
 
 #search-bar button{
     height: 100%;   
-    margin-left: 1em;   
+    border: 1px solid var(--color-secundary-button);
+    background-color: white;
+    
 } 
 #tools-bar {
     height: 100%;
@@ -151,7 +157,7 @@ nav {
 
 .menu button {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 25px;
+    font-size: 1em;
     background-color: var(--color-primary-button);
     border: 1px solid var(--color-secundary-button);
     color: var(--color-secundary-button);

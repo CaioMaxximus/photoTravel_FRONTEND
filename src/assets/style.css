@@ -8,8 +8,10 @@
     --color-background-white: #ffffff;
     --color-background-lighter-grey: #e2e0e0;
     --color-background-midle-grey :#A2AF9F;
+    --color-background-darker-gray : #444444;
     --color-lighter-blue : #57B5D2;
     --color-darker-blue: #00809B ;
+    --color-midle-gray : #00809B;
 
 }
 
@@ -19,7 +21,7 @@ body , #root{
     padding: 0 ;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-background-lighter-grey);
+    background-color: var(--color-background-white);
 }
 
 p{

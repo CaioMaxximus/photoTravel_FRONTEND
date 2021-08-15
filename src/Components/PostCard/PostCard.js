@@ -10,8 +10,12 @@ export default function postCard(props){
 
 
     return  <div className = "post_card">
-        {/* <header>${post_name}</header> */}
+        <header>
+            <div>
+                <p>numero de likes</p>
+            </div>
+        </header>
         <img src= {imageUrl} />
-        {/* <footer>by : {user_nick}</footer> */}
+        <footer>by : user_nick</footer>
     </div>
 }
