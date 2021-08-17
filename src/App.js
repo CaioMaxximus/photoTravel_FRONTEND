@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 // import Routes from './routes'
 import './App.css'
 // import { createHashHistory } from 'history'
@@ -7,6 +7,7 @@ import Home from './views/Home'
 import Gallery from './views/Gallery'
 import Register from './views/Register'
 import Login from './views/Login'
+
 // const history = createHashHistory()
 
 
@@ -15,7 +16,7 @@ const logo = require('./assets/images/InfiteTravelLogoNotBackground.png')
 function App() {
 
 
-
+    let [search_opt ,setSearchOpt] = useState("posts");
 
     return (
         <div>
@@ -26,10 +27,10 @@ function App() {
                 </div>
 
                 <div id="search-bar">
-                    <div id="search-options">Users
+                    <div id="search-options">{search_opt}
                         <ul>
-                            <li><button>users</button></li>
-                            <li><button>posts</button></li>
+                            <li><button onClick = {() => setSearchOpt("users") }>users</button></li>
+                            <li><button onClick = {() => setSearchOpt("posts")}>posts</button></li>
                         </ul>
                     </div>
                     <input type="text" placeholder="Search.." />

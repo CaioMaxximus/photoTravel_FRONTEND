@@ -23,6 +23,14 @@ body , #root{
     justify-content: center;
     background-color: var(--color-background-white);
 }
+html, body, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
 p{
     font: 32px sans-serif 300 ;

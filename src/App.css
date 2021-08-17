@@ -79,7 +79,7 @@
 
 #search-bar #search-options ul li button{
     background-color: var(--color-primary-button);
-    border: 1px solid var(--color-secundary-button);
+    border: 1px solid var(--color-primary-button);
     color  : var(--color-secundary-button);
 
 }
