@@ -54,8 +54,9 @@
     margin: 0;
     padding: 0;
     display: block;
-    width  : 5rem;
+    width  : inherit;
     top: 3rem;
+    height: 3.5rem;
 
 
 }
@@ -72,8 +73,9 @@
 
 #search-bar #search-options ul li {
     padding: 0;
-    margin: 3px;
+    margin: 1px;
     width: 5rem;
+    
 
 }
 
@@ -81,6 +83,7 @@
     background-color: var(--color-primary-button);
     border: 1px solid var(--color-primary-button);
     color  : var(--color-secundary-button);
+    width: 100%;
 
 }
 #search-bar input{
@@ -157,7 +160,7 @@ nav {
 
 .menu button {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1em;
+    font-size: 1rem;
     background-color: var(--color-primary-button);
     border: 1px solid var(--color-secundary-button);
     color: var(--color-secundary-button);

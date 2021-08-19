@@ -29,10 +29,14 @@ export default function PostCreator() {
 
     }
 
+    function changeVisibility(){
+        
+    }
+
     return (<div id="post-creator">
         {/* trocar por form talvez */}
         <div className="content">
-            <form action="">
+            <form action="" id = "form-creator">
                 <label htmlFor="link">ImageLink:</label>
                 <input name="link" type="text" />
                 <label htmlFor="tags">Add some tags to you image..</label>
@@ -44,6 +48,11 @@ export default function PostCreator() {
                 </div>
 
             </form>
+            <button onClick ={() => changeVisibility()} >create</button>
+
+            
         </div>
+        <div>
+            </div>
     </div>)
 }

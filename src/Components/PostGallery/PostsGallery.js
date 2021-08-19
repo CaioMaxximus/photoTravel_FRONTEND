@@ -21,10 +21,28 @@ class PostsGallery extends Component {
 
     }
 
+    // renderGallery(post, index) {
+
+    //     if (index % 2 == 0) {
+    //         return <div id="column-two"> <div className='post-unit'> </div></div>;
+    //     }
+    //     else {
+    //         return <div id="column-one"> <div className='post-unit'><PostCard props={post}></PostCard> </div></div>;
+    //     }    
+
+    // }
+
     render() {
         return <div id="posts-gallery-view">
             <div className="images-container">
-                {this.state.posts.map((post) => <div className = "post-unit"><PostCard props={post}></PostCard></div>)}
+                <div id="column-one">
+                    {this.state.posts.map((post, index) => index % 2 !== 0 ? <PostCard props={post}></PostCard> : '')}
+
+                </div>
+
+                <div id="column-two">
+                    {this.state.posts.map((post, index) => index % 2 === 0 ?  <PostCard props={post}></PostCard>: '')}
+                </div>
 
             </div>
         </div>

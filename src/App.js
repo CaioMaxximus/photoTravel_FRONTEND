@@ -7,6 +7,7 @@ import Home from './views/Home'
 import Gallery from './views/Gallery'
 import Register from './views/Register'
 import Login from './views/Login'
+import PostCreator from './Components/PostCreator/PostCreator.js'
 
 // const history = createHashHistory()
 
@@ -29,8 +30,8 @@ function App() {
                 <div id="search-bar">
                     <div id="search-options">{search_opt}
                         <ul>
-                            <li><button onClick = {() => setSearchOpt("users") }>users</button></li>
-                            <li><button onClick = {() => setSearchOpt("posts")}>posts</button></li>
+                            <li><button onClick = {() => {setSearchOpt("users") ; } }>users</button></li>
+                            <li><button onClick = {() => {setSearchOpt("posts") ; }}>posts</button></li>
                         </ul>
                     </div>
                     <input type="text" placeholder="Search.." />
@@ -65,6 +66,9 @@ function App() {
                     </div>
 
                 </HashRouter>
+            </div>
+            <div id = "creator">
+                <PostCreator></PostCreator>
             </div>
             <div className="views">
                 <HashRouter>
