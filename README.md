@@ -2,17 +2,17 @@
 Working with react to create hight quality and "clean code" web pages design 
 
 
-##Functions
+## Functions
 
     .Create a post indexing an image from web , adding a personal description and tags;
     .Give like to some post that user want;
     .Search another users and post through his nicknames and posts;
 
-##Comands
+## Comands
 
 ```javascript 
-npm start```
+npm start 
 
-###Link to backend
+## Link to backend
     .https://github.com/CaioMaxximus/photoTravel_BACKEND.git
 
