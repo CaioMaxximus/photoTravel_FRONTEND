@@ -1,5 +1,6 @@
 import React from 'react'
 import PostCreator from '../../Components/PostCreator/PostCreator'
+import PostsGallery from '../../Components/PostGallery/PostsGallery'
 import './style.css'
 
 const panelImg1 = require('../../assets/images/mostafa-meraji-l7mA-KmHXnc-unsplash.jpg')
@@ -10,31 +11,39 @@ const panelImg4 = require('../../assets/images/svetlana-gumerova-CPJ1yQSa3L0-uns
 function Home() {
 
 
-    return (<div id="homepage">
+    return (<div id="user-profile">
 
 
-        <div className="content">
+        <div className="profile-content">
 
-            <PostCreator> </PostCreator>
-
-            <h1>Welcome to our web page!</h1>
-            <h2>We're a company focused in facilitate your travel program! Enjoy us!!</h2>
+            <div id = "lateral-bar">
+                <div id  = "user-perfil-photo">
+                    Foto usuario
+                </div>
+                <div id = "user-perfil-description">
+                    descricao usuario
+                </div>
+                <div>
+                    
+                </div>
+            </div>
 
             <div className="content-section">
-                <p>
-                    We work in program the best route to each kind of people. 
-                    Hotel, fly time, 
-                </p>
+                <h3>YOUR POSTS</h3>
+                <div id = "user-posts-gallery">
+                    <PostsGallery></PostsGallery>
+                </div>
+
             </div>
 
 
-
+{/* 
             <div className="panel">
                 <img src={panelImg1} alt="" />
                 <img src={panelImg2} alt="" />
                 <img src={panelImg3} alt="" />
                 <img src={panelImg4} alt="" />
-            </div>
+            </div> */}
         </div>
 
 

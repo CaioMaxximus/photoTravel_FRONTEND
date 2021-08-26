@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 // import Routes from './routes'
 import './App.css'
 // import { createHashHistory } from 'history'
@@ -17,59 +17,68 @@ const logo = require('./assets/images/InfiteTravelLogoNotBackground.png')
 function App() {
 
 
-    let [search_opt ,setSearchOpt] = useState("posts");
+    let [search_opt, setSearchOpt] = useState("posts");
+    let [visibility, setVisibility] = useState("none");
 
     return (
         <div>
 
-            <div id="header">
-                <div id="logo">
-                    <img src={logo} alt="InfiniteTravelLogo"></img>
-                </div>
+            <div id="top-elements">
 
-                <div id="search-bar">
-                    <div id="search-options">{search_opt}
-                        <ul>
-                            <li><button onClick = {() => {setSearchOpt("users") ; } }>users</button></li>
-                            <li><button onClick = {() => {setSearchOpt("posts") ; }}>posts</button></li>
-                        </ul>
+                <div id="header">
+                    <div id="logo">
+                        <img src={logo} alt="InfiniteTravelLogo"></img>
                     </div>
-                    <input type="text" placeholder="Search.." />
 
-                    <button>
-                        Search
-                    </button>
-                </div>
-                <HashRouter>
-                    <div id="tools-bar">
-                        <nav>
-                            <ul className="menu">
-                                <li>
-                                    <NavLink to="/"><button>Home</button></NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/gallery"><button >Gallery</button></NavLink>
-                                </li>
-                                <li><button>About</button>
-                                    <ul>
-                                        <li>
-                                            <NavLink to="/we"><button>Who are we?</button></NavLink>
-                                        </li>
-                                        <li>
-                                            <NavLink to="/contact"><button>Contact</button></NavLink>
-                                        </li>
-                                    </ul>
-                                </li>
-
+                    <div id="search-bar">
+                        <div id="search-options" 
+                        onMouseOver = {() => setVisibility("grid")}
+                        onMouseOut = {() => setVisibility("none")} 
+                        >{search_opt}
+                            <ul style={{ display: visibility }}>
+                                <li ><button onClick={function() { setSearchOpt("users"); setVisibility("none") }}>users</button></li>
+                                <li ><button onClick={function(){ setSearchOpt("posts"); setVisibility("none") }}>posts</button></li>
                             </ul>
-                        </nav>
-                    </div>
+                        </div>
+                        <input type="text" placeholder="Search.." />
 
-                </HashRouter>
+                        <button>
+                            Search
+                        </button>
+                    </div>
+                    <HashRouter>
+                        <div id="tools-bar">
+                            <nav>
+                                <ul className="menu">
+                                    <li>
+                                        <NavLink to="/"><button>Home</button></NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/gallery"><button >Gallery</button></NavLink>
+                                    </li>
+                                    <li><button>About</button>
+                                        <ul>
+                                            <li>
+                                                <NavLink to="/we"><button>Who are we?</button></NavLink>
+                                            </li>
+                                            <li>
+                                                <NavLink to="/contact"><button>Contact</button></NavLink>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </HashRouter>
+
+                </div>
+                <div id="creator">
+                    <PostCreator></PostCreator>
+                </div>
             </div>
-            <div id = "creator">
-                <PostCreator></PostCreator>
-            </div>
+
             <div className="views">
                 <HashRouter>
                     <Route exact path="/" component={Home}></Route>
@@ -81,7 +90,7 @@ function App() {
                 </HashRouter>
             </div>
 
-        </div>
+        </div >
     )
 
 }

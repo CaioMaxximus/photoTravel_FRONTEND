@@ -1,3 +1,19 @@
+#top-elements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    width: 90vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+#top-elements #creator{
+    width: 35rem;
+    height: 5rem;
+}
+
 #header {
     top: 0px;
     margin: 0 auto;
@@ -8,9 +24,7 @@
     font-family: 'Oswald', sans-serif;
     display: grid;
     grid-template-columns: 1fr 3fr 2fr;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
+    
     background-color: var(--color-lighter-blue);
     border: solid 1px black;
     box-shadow: 0px 1px 4px ;
@@ -176,6 +190,8 @@ nav {
     border: 2px solid var(--color-primary-button);
     opacity: 1;
 }
+
+
 
 .views {
     height: auto;

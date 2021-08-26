@@ -50,6 +50,7 @@ export default function PostCreator() {
             </form>
             <button onClick ={() => changeVisibility()} >create</button>
 
+
             
         </div>
         <div>
