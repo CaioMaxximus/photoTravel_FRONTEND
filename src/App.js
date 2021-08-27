@@ -19,7 +19,6 @@ function App() {
 
     let [search_opt, setSearchOpt] = useState("posts");
     let [visibility, setVisibility] = useState("none");
-
     return (
         <div>
 
@@ -74,7 +73,7 @@ function App() {
                     </HashRouter>
 
                 </div>
-                <div id="creator">
+                <div id="creator" >
                     <PostCreator></PostCreator>
                 </div>
             </div>
