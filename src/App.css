@@ -10,11 +10,13 @@
     transform: translate(-50%, 0);
     opacity: 0.5;
     z-index : 9999;
+    transition: 0.2s;
 }
 
 #top-elements:hover {
     opacity: 1;
 }
+
 
 #top-elements #creator{
     width: 35rem;

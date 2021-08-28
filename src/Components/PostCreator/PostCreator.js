@@ -11,7 +11,7 @@ export default function PostCreator() {
     let [tags, setTags] = useState([]);
     let [tagString, setTagString] = useState("");
     let [actualTag, setActualTag] = useState("");
-    let [creatorDisplay , setCreatorDisplay] = useState("none");
+    let [creatorDisplay , setCreatorDisplay] = useState("flex");
 
     function tagsMarker(e) {
 
@@ -55,7 +55,7 @@ export default function PostCreator() {
                 </div>
 
             </form>
-            <button onClick ={() => changeVisibility()} >create</button>
+            <button id = "visibilty-creator-changer-btn"onClick ={() => changeVisibility()} >create</button>
 
 
             
