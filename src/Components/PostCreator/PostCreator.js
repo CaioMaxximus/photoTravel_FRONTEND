@@ -43,7 +43,7 @@ export default function PostCreator() {
     return (<div id="post-creator">
         {/* trocar por form talvez */}
         <div className="content" >
-            <form action="" id = "form-creator" style = {{display : creatorDisplay}}>
+            <form action="" id = "form-creator" >
                 <label htmlFor="link">ImageLink:</label>
                 <input name="link" type="text" />
                 <label htmlFor="tags">Add some tags to you image..</label>

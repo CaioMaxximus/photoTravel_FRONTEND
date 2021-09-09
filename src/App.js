@@ -19,6 +19,8 @@ function App() {
 
     let [search_opt, setSearchOpt] = useState("posts");
     let [visibility, setVisibility] = useState("none");
+
+    
     return (
         <div>
 
