@@ -88,7 +88,8 @@ function App() {
                 <Route path="contact" component = {} ></Route> */}
                     <Route path="/register" component={Register}></Route>
                     <Route path="/login" component={Login}></Route>
-                </HashRouter>
+                    <Route path="/register" component = {Register}></Route>
+                    </HashRouter>
             </div>
 
         </div >

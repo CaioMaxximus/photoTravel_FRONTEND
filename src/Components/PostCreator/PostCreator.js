@@ -11,7 +11,7 @@ export default function PostCreator() {
     let [tags, setTags] = useState([]);
     let [tagString, setTagString] = useState("");
     let [actualTag, setActualTag] = useState("");
-    let [creatorDisplay , setCreatorDisplay] = useState("flex");
+    let [creatorDisplay , setCreatorDisplay] = useState("none");
 
     function tagsMarker(e) {
 
@@ -43,11 +43,11 @@ export default function PostCreator() {
     return (<div id="post-creator">
         {/* trocar por form talvez */}
         <div className="content" >
-            <form action="" id = "form-creator" >
+            <form action="" id = "form-creator" style = {{display : creatorDisplay}}>
                 <label htmlFor="link">ImageLink:</label>
                 <input name="link" type="text" />
                 <label htmlFor="tags">Add some tags to you image..</label>
-                <div id="tags-creator">
+                <div id="tags-creator"  >
                     <div id="tags-area">{tags.map(tag => <button className="tag-miniature-creation">{tag}</button>)}</div>
                     <input type="text" onChange={(e) =>
                         tagsMarker(e)}

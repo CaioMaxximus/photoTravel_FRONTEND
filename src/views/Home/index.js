@@ -3,6 +3,7 @@ import PostCreator from '../../Components/PostCreator/PostCreator'
 import PostsGallery from '../../Components/PostGallery/PostsGallery'
 import './style.css'
 import api from '../../resources/api.js'
+import { HashRouter, Link, NavLink } from 'react-router-dom'
 
 const panelImg1 = require('../../assets/images/mostafa-meraji-l7mA-KmHXnc-unsplash.jpg')
 const panelImg2 = require('../../assets/images/mostafa-meraji-TtWStH-JuL8-unsplash.jpg')
@@ -14,9 +15,11 @@ function Home() {
 
 
     ///Coleta os dados do perfil do usuario
-    function getUserData(){
+    async function getUserData() {
         const userData = await api.get("")
     }
+
+
 
 
     return (<div id="user-profile">
@@ -24,28 +27,38 @@ function Home() {
 
         <div className="profile-content">
 
-            <div id = "lateral-bar">
-                <div id  = "user-perfil-photo">
+            <div id="lateral-bar">
+                <div id="user-perfil-photo">
                     Foto usuario
                 </div>
-                <div id = "user-perfil-description">
-                    descricao usuario
+                <div id="user-perfil-options">
+                    <HashRouter>
+                        <NavLink to="/login">Sair-da Conta</NavLink>
+                        <NavLink to="/perfil-config">Editar Perfil</NavLink>
+                    </HashRouter>
+
                 </div>
+                <div id="user-perfil-description">
+                    <div></div>
+                    descricao usuario
+
+                </div>
+
                 <div>
-                    
+
                 </div>
             </div>
 
             <div className="content-section">
                 <h3>YOUR POSTS</h3>
-                <div id = "user-posts-gallery">
+                <div id="user-posts-gallery">
                     <PostsGallery></PostsGallery>
                 </div>
 
             </div>
 
 
-{/* 
+            {/* 
             <div className="panel">
                 <img src={panelImg1} alt="" />
                 <img src={panelImg2} alt="" />

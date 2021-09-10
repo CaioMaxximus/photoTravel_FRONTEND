@@ -22,9 +22,10 @@ export default function Register() {
                 description,
                 password
             }).then(() => {
-                ///vai para a tela de posts!!
+        
+                window.open("/gallery");
             }).catch((e) => {
-                console.log(e);
+                alert(e);
                 ///exibe o erro para o user
             })
         }
