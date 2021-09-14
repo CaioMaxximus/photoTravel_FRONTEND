@@ -33,8 +33,12 @@ function Home() {
                 </div>
                 <div id="user-perfil-options">
                     <HashRouter>
-                        <NavLink to="/login">Sair-da Conta</NavLink>
-                        <NavLink to="/perfil-config">Editar Perfil</NavLink>
+                        <div>
+                            <NavLink to="/login">Sair-da Conta</NavLink>
+                        </div>
+                        <div>
+                            <NavLink to="/perfil-config">Editar Perfil</NavLink>
+                        </div>
                     </HashRouter>
 
                 </div>

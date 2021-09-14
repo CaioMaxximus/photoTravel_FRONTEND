@@ -8,18 +8,45 @@
     height: 100%;
     width: 100%;
     position: relative;
-
-
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
+#register .content .form-user-area{
+    max-height: 400px;
+    z-index: 1;
+    display: grid;
+    width: 80%;
+    grid-template-columns: 10fr 1fr;
+}
+#register .content .form-user-area #next-position{
+    z-index: 5;
+}
+#register .content .form-user-area #next-position button{
+    height: 100%;
+    width: 100%;
+}
+
+/* #register .content .form-user-area #next-position:hover +  #in-first-step{
+    animation: slide-left 0.5s linear forwards;
+    max-height: 400px;
+    z-index: 5;
+    transform: translate(-500px);
+} */
+
 #register .content .form-user-area #in-first-step{
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+    margin: 0 auto;
+    transition: 0.1.5s ease-in-out forwards;
+    z-index: 5;
+    background-color: var(--color-background-lighter-grey);
 
 }
 
@@ -33,9 +60,20 @@
 
 }
 
-#register .content #in-secod-step{
+#register .content #in-second-step{
     position: absolute;
-    width: 100%;
+    width: 80%;
     height: 100%;
     top : 0;
+    align-self: center;
+    z-index: 0;
+}
+
+@keyframes slide-left {
+    
+    from{
+        transform: translate(0);
+    }to{
+        transform: translate(-500px);
+    }
 }

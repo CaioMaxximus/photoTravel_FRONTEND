@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { HashRouter, NavLink } from 'react-router-dom';
+import { HashRouter, Link, NavLink ,useHistory} from 'react-router-dom';
 import api from '../../resources/api';
 import './style.css'
 
@@ -20,6 +20,13 @@ export default function Login(props) {
         });
     }
 
+    function useHandleRegister(e){
+
+        let history = useHistory();
+        history.push("/register");
+
+    }
+
 
 
     return (
@@ -33,9 +40,8 @@ export default function Login(props) {
             </form>
             <div>
                 <HashRouter>
-                    <NavLink to="/register">Ainda Não possuo uma conta</NavLink>
+                    <Link to="/register">Ainda Não possuo uma conta</Link>
                 </HashRouter>
-
             </div>
 
         </div>)
