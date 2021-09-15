@@ -3,11 +3,9 @@ import React, { useState } from 'react'
 import './App.css'
 // import { createHashHistory } from 'history'
 import { Route, NavLink, HashRouter } from 'react-router-dom'
-import Home from './views/Home'
-import Gallery from './views/Gallery'
-import Register from './views/Register'
-import Login from './views/Login'
+
 import PostCreator from './Components/PostCreator/PostCreator.js'
+import CredentialConnect from './views/CredentialConnect'
 
 // const history = createHashHistory()
 
@@ -82,12 +80,12 @@ function App() {
 
             <div className="views">
                 <HashRouter>
-                    <Route exact path="/" component={Home}></Route>
-                    <Route path="/gallery" component={Gallery}></Route>
+                   
                     {/* <Route path="we"  component = {}></Route>
                 <Route path="contact" component = {} ></Route> */}
-                    <Route path="/register" component={Register}></Route>
-                    <Route path="/login" component={Login}></Route>
+                   <CredentialConnect>
+
+                   </CredentialConnect>
                     </HashRouter>
             </div>
 

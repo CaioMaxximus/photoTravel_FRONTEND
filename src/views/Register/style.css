@@ -5,75 +5,51 @@
 }
 
 #register .content{
-    height: 100%;
-    width: 100%;
+    margin: 0 auto;
+    height: 80%;
+    width: 70%;
+    max-height: 400px;
+    max-width: 600px;
     position: relative;
     align-items: center;
     justify-content: center;
     display: flex;
+    perspective: 1000px; 
+
 }
+
 
 #register .content .form-user-area{
-    max-height: 400px;
-    z-index: 1;
-    display: grid;
-    width: 80%;
-    grid-template-columns: 10fr 1fr;
-}
-#register .content .form-user-area #next-position{
-    z-index: 5;
-}
-#register .content .form-user-area #next-position button{
-    height: 100%;
-    width: 100%;
-}
 
-/* #register .content .form-user-area #next-position:hover +  #in-first-step{
-    animation: slide-left 0.5s linear forwards;
-    max-height: 400px;
-    z-index: 5;
-    transform: translate(-500px);
-} */
-
-#register .content .form-user-area #in-first-step{
     position: relative;
     display: flex;
-    flex-direction: column;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 85%;
     height: 100%;
-    margin: 0 auto;
-    transition: 0.1.5s ease-in-out forwards;
-    z-index: 5;
-    background-color: var(--color-background-lighter-grey);
+    transform-style: preserve-3d;
+    transition: 0.5s linear 0.1s;
 
 }
 
-#register .content .form-user-area #in-first-step label{
-    margin-bottom: 0.5em;
-    
-}
+/* #register .content :hover.form-user-area{
 
-#register .content .form-user-area #in-first-step input{
-    margin-bottom: 1em;
+    transform: rotateY(-180deg) ;
+} */
 
-}
 
-#register .content #in-second-step{
+#in-first-step , #in-second-step{
+
     position: absolute;
-    width: 80%;
-    height: 100%;
-    top : 0;
-    align-self: center;
-    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    column-gap: 5px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
 }
 
-@keyframes slide-left {
-    
-    from{
-        transform: translate(0);
-    }to{
-        transform: translate(-500px);
-    }
+#in-second-step {
+    transform: rotateY(180deg);
 }

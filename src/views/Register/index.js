@@ -13,15 +13,28 @@ export default function Register() {
 
     const window_size = window.innerWidth;
     console.log(window_size);
+    let state = false;
 
 
     function changeStep() {
        
-        let $first_step = document.getElementById("in-first-step");
-        $first_step.style.transition = "1s ease-out ";
+        let $form = document.getElementsByClassName("form-user-area")[0];
+        // $form.style.transition = "transition: 1s linear 0.1s both";
 
-        $first_step.style.transform = `translate(${-500}px) scaleX(0.5)`;
-        console.log("aq");
+        if (state){
+            $form.style.transform = `rotateY(${0}deg)`;
+            $form.style.backgroundColor = "blue";
+            state = false;
+      
+        }else{
+            $form.style.transform = `rotateY(${-180}deg)`;
+            $form.style.backgroundColor = "red"
+            state = true;
+            // $first_step.style.opacity = 0;
+            console.log("aq");
+    }
+
+    console.log($form.style.transform)
         
     }
 
@@ -29,7 +42,7 @@ export default function Register() {
     function registerUser() {
 
         if (verifyData) {
-            api.post("users", {
+            api.post("/users", {
                 nickname,
                 email,
                 description,
@@ -39,6 +52,7 @@ export default function Register() {
                 window.open("/gallery");
             }).catch((e) => {
                 alert(e);
+                console.log(e);
                 ///exibe o erro para o user
             })
         }
@@ -68,19 +82,22 @@ export default function Register() {
 
                     <label htmlFor="confirm-password">Confirm Password </label>
                     <input name="confirm-password" type="text" value={passwordConfirm} onChange={(e) => setPasswordConfirm(e.target.value)} />
-                    <button> NextStep</button>
+                    <button onClick={() =>changeStep()} >Continue </button>                  
                 </div>
 
                 <div id="in-second-step">
                     <label htmlFor="description">Add a description about you: </label>
                     <input type="text" />
-                </div>
 
-                <div id="next-position">
-                    <button onClick={() =>changeStep()} ></button>
+                    <button onClick={() =>changeStep()} > Back</button>                  
+                    <button onClick={() => { registerUser() }} > Registe</button>
+
+
                 </div>
-                <button onClick={() => { registerUser() }} >REGISTER</button>
+                
             </div>
+            <div id="next-position">
+                </div>
         </div>
 
     </div>)
