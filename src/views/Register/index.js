@@ -92,7 +92,6 @@ export default function Register() {
                     <button onClick={() =>changeStep()} > Back</button>                  
                     <button onClick={() => { registerUser() }} > Registe</button>
 
-
                 </div>
                 
             </div>

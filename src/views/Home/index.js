@@ -3,7 +3,7 @@ import PostCreator from '../../Components/PostCreator/PostCreator'
 import PostsGallery from '../../Components/PostGallery/PostsGallery'
 import './style.css'
 import api from '../../resources/api.js'
-import { HashRouter, Link, NavLink } from 'react-router-dom'
+import { BrowserRouter, Link, NavLink } from 'react-router-dom'
 
 const panelImg1 = require('../../assets/images/mostafa-meraji-l7mA-KmHXnc-unsplash.jpg')
 const panelImg2 = require('../../assets/images/mostafa-meraji-TtWStH-JuL8-unsplash.jpg')
@@ -32,14 +32,15 @@ function Home() {
                     Foto usuario
                 </div>
                 <div id="user-perfil-options">
-                    <HashRouter>
-                        <div>
-                            <NavLink to="/login">Sair-da Conta</NavLink>
+                    <BrowserRouter basename ="/credentials">
+                    <div>
+                            <NavLink to="/login" replace>Sair-da Conta</NavLink>
                         </div>
                         <div>
-                            <NavLink to="/perfil-config">Editar Perfil</NavLink>
+                            <NavLink to="/perfil-config" replace>Editar Perfil</NavLink>
                         </div>
-                    </HashRouter>
+                    </BrowserRouter>
+                       
 
                 </div>
                 <div id="user-perfil-description">

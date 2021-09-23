@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import { HashRouter, Link, NavLink ,useHistory} from 'react-router-dom';
+import {BrowserRouter , useRouteMatch, Link, useHistory } from 'react-router-dom';
 import api from '../../resources/api';
 import './style.css'
 
 
 export default function Login(props) {
+
+    const match = useRouteMatch();
 
     let [nickname, setNickname] = useState("");
     let [email, setEmail] = useState("");
@@ -20,7 +22,7 @@ export default function Login(props) {
         });
     }
 
-    function useHandleRegister(e){
+    function useHandleRegister(e) {
 
         let history = useHistory();
         history.push("/register");
@@ -39,9 +41,10 @@ export default function Login(props) {
                 <button>Login</button>
             </form>
             <div>
-                <HashRouter>
-                    <Link to="/register">Ainda Não possuo uma conta</Link>
-                </HashRouter>
+                <BrowserRouter>
+                    <Link to={`credentials/register`} replace>Ainda Não possuo uma conta</Link>
+                </BrowserRouter>
+
             </div>
 
         </div>)
