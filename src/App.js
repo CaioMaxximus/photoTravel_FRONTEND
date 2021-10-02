@@ -14,17 +14,18 @@ import Application from './views/Application'
 const background = require('./assets/images/antoine-julien-r9QZo2VJx6w-unsplash.jpg')
 const logo = require('./assets/images/InfiteTravelLogoNotBackground.png')
 function App() {
-    return (<BrowserRouter>
-        <div>
+    return (
+        <div >
 
-            <div className="views">
 
                 {/* <Route path="we"  component = {}></Route>
                 <Route path="contact" component = {} ></Route> */}
                 {/* <CredentialConnect ></CredentialConnect> */}
+                
                 <Switch>
-                    <Route exact path="/app" >
+                    <Route  path="/app" >
                         <Application />
+                    
                     </Route>
                     <Route path="/credentials">
                         <CredentialConnect />
@@ -32,8 +33,7 @@ function App() {
 
                 </Switch>
 
-            </div>
-        </div>            </BrowserRouter>
+        </div>          
     )
 
 

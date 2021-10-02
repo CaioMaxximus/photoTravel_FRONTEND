@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { Route, NavLink, BrowserRouter, useRouteMatch } from 'react-router-dom'
 import PostCreator from '../Components/PostCreator/PostCreator.js'
-import { HashRouter, Switch, Router, Link, useParams } from 'react-router-dom'
+import { HashRouter, Switch, Router, Link, useParams, useHistory } from 'react-router-dom'
 import Home from '../views/Home'
 import Gallery from '../views/Gallery'
+import "./Application.css"
+
 const logo = require('../assets/images/InfiteTravelLogoNotBackground.png')
 
 export default function Application() {
@@ -12,15 +14,15 @@ export default function Application() {
   let [search_opt, setSearchOpt] = useState("posts");
   let [visibility, setVisibility] = useState("none");
 
-  let match = useRouteMatch()
+  const match = useRouteMatch()
 
   // console.log(matchPage.url, matchPage.path);
 
   // console.log(`${matchPage.url}/gallery`)
   // console.log(`${matchPage.path}/perfil`)
   return (
-    <BrowserRouter>
-
+    
+    <BrowserRouter >
       <div>
 
         <div id="top-elements">
@@ -50,10 +52,10 @@ export default function Application() {
               <nav>
                 <ul className="menu">
                   <li>
-                    <Link to={`${match.url}/perfil`} replace><button>Home</button></Link>
+                    <Link to={`${match.url}/perfil`}   ><button>Home</button></Link>
                   </li>
                   <li>
-                    <Link to={`${match.url}`} replace><button >Gallery</button></Link>
+                    <Link to={`${match.url}/gallery`} ><button >Gallery</button></Link>
                   </li>
                   <li><button>About</button>
                     <ul>
@@ -78,11 +80,11 @@ export default function Application() {
         </div>
         <div id="views">
           <Switch>
-            <Route path={`${match.path}/perfil`}>
+            <Route path={`${match.path}/perfil`} >
               a
               <Home />
             </Route>
-            <Route exact path={`${match.path}`} >
+            <Route  path={`${match.path}/gallery`} >
               Gallery
               <Gallery />
             </Route>
@@ -90,10 +92,12 @@ export default function Application() {
 
           </Switch>
 
+
+
         </div>
 
-      </div>
-    </BrowserRouter>)
+      </div></BrowserRouter>
+  )
 
 
 }

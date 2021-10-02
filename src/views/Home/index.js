@@ -3,15 +3,17 @@ import PostCreator from '../../Components/PostCreator/PostCreator'
 import PostsGallery from '../../Components/PostGallery/PostsGallery'
 import './style.css'
 import api from '../../resources/api.js'
-import { BrowserRouter, Link, NavLink } from 'react-router-dom'
+import { BrowserRouter, Link, NavLink  , useHistory} from 'react-router-dom'
 
 const panelImg1 = require('../../assets/images/mostafa-meraji-l7mA-KmHXnc-unsplash.jpg')
 const panelImg2 = require('../../assets/images/mostafa-meraji-TtWStH-JuL8-unsplash.jpg')
 const panelImg3 = require('../../assets/images/mostafa-meraji-Z_WogC_UONo-unsplash.jpg')
 const panelImg4 = require('../../assets/images/svetlana-gumerova-CPJ1yQSa3L0-unsplash.jpg')
 
-function Home() {
+function Home(props) {
 
+
+    const history = useHistory();
 
 
     ///Coleta os dados do perfil do usuario
@@ -22,7 +24,7 @@ function Home() {
 
 
 
-    return (<div id="user-profile">
+    return (<BrowserRouter><div id="user-profile">
 
 
         <div className="profile-content">
@@ -32,14 +34,12 @@ function Home() {
                     Foto usuario
                 </div>
                 <div id="user-perfil-options">
-                    <BrowserRouter basename ="/credentials">
                     <div>
-                            <NavLink to="/login" replace>Sair-da Conta</NavLink>
+                            <button to="" onClick = {function() { history.push("/credentials/login");window.location.reload()}}>Sair-da Conta</button>
                         </div>
                         <div>
-                            <NavLink to="/perfil-config" replace>Editar Perfil</NavLink>
+                            <button to="/perfil-config" replace>Editar Perfil</button>
                         </div>
-                    </BrowserRouter>
                        
 
                 </div>
@@ -74,7 +74,8 @@ function Home() {
 
 
 
-    </div>)
+    </div>
+    </BrowserRouter>)
 }
 
 export default Home

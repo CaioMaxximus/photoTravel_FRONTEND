@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import api from './../../resources/api.js'
 import './style.css';
 
 export default function Register() {
 
+    const history = useHistory();
 
     let [nickname, setNickname] = useState("");
     let [email, setEmail] = useState("");
@@ -17,25 +19,23 @@ export default function Register() {
 
 
     function changeStep() {
-       
+
         let $form = document.getElementsByClassName("form-user-area")[0];
         // $form.style.transition = "transition: 1s linear 0.1s both";
 
-        if (state){
+        if (state) {
             $form.style.transform = `rotateY(${0}deg)`;
-            $form.style.backgroundColor = "blue";
             state = false;
-      
-        }else{
+
+        } else {
             $form.style.transform = `rotateY(${-180}deg)`;
-            $form.style.backgroundColor = "red"
             state = true;
             // $first_step.style.opacity = 0;
             console.log("aq");
-    }
+        }
 
-    console.log($form.style.transform)
-        
+        console.log($form.style.transform)
+
     }
 
 
@@ -68,35 +68,54 @@ export default function Register() {
     return (<div id="register">
         <div className="content">
             <div className="form-user-area">
-                
+
                 <div id="in-first-step">
+                    <form action="">
+                        <div>
+                            <label htmlFor="nickname">NickName: </label>
+                            <input name="nickname" type="text" value={nickname} onChange={(e) => setNickname(e.target.value)} />
+                            <div className="floating-message" id="flt-msg-1">
+                                The nick need ...
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="email">Email:</label>
+                            <input name="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <div className="floating-message" id="flt-msg-2">
+                                The nick need ...
+                            </div>
+                        </div>
+                        <div>
+                            <label htmlFor="password">Password: </label>
+                            <input name="password" type="text" value={password} onChange={(e) => setPassword(e.target.value)} />
+                            <div className="floating-message" id="flt-msg-3">
+                                The nick need .....................
+                            </div>
+                        </div>
 
-                    <label htmlFor="nickname">NickName: </label>
-                    <input name="nickname" type="text" value={nickname} onChange={(e) => setNickname(e.target.value)} />
+                        <div>
+                            <label htmlFor="confirm-password">Confirm Password </label>
+                            <input name="confirm-password" type="text" value={passwordConfirm} onChange={(e) => setPasswordConfirm(e.target.value)} />
+                        </div>
 
-                    <label htmlFor="email">Email:</label>
-                    <input name="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
 
-                    <label htmlFor="password">Password: </label>
-                    <input name="password" type="text" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    </form>
 
-                    <label htmlFor="confirm-password">Confirm Password </label>
-                    <input name="confirm-password" type="text" value={passwordConfirm} onChange={(e) => setPasswordConfirm(e.target.value)} />
-                    <button onClick={() =>changeStep()} >Continue </button>                  
+                    <button onClick={() => changeStep()} >Continue </button>
                 </div>
 
                 <div id="in-second-step">
                     <label htmlFor="description">Add a description about you: </label>
                     <input type="text" />
 
-                    <button onClick={() =>changeStep()} > Back</button>                  
+                    <button onClick={() => changeStep()} > Back</button>
                     <button onClick={() => { registerUser() }} > Registe</button>
 
                 </div>
-                
+
             </div>
             <div id="next-position">
-                </div>
+            </div>
         </div>
 
     </div>)

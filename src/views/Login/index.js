@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {BrowserRouter , useRouteMatch, Link, useHistory } from 'react-router-dom';
+import {BrowserRouter , useRouteMatch, Link, useHistory  } from 'react-router-dom';
 import api from '../../resources/api';
 import './style.css'
 
@@ -7,18 +7,20 @@ import './style.css'
 export default function Login(props) {
 
     const match = useRouteMatch();
+    const history = useHistory();
 
     let [nickname, setNickname] = useState("");
     let [email, setEmail] = useState("");
     let [password, setPassword] = useState("");
 
     async function login() {
-        await api.post("user/authenticate", {
-            nickname, email, password
+        await api.post("/login", {
+            nickname, password
         }).then((res) => {
-
+            window.localStorage = res;
+            history.push("app/gallery");
         }).catch(err => {
-
+            alert("dados inválidos");
         });
     }
 
@@ -41,9 +43,7 @@ export default function Login(props) {
                 <button>Login</button>
             </form>
             <div>
-                <BrowserRouter>
-                    <Link to={`credentials/register`} replace>Ainda Não possuo uma conta</Link>
-                </BrowserRouter>
+                    <Link to={`register`}>Ainda Não possuo uma conta</Link>
 
             </div>
 

@@ -1,5 +1,5 @@
 :root{
-    --color-primary-button: #1a1d1a;
+    /* --color-primary-button: #1a1d1a;
     --color-secundary-button : #f0efef;
     --color-primary-panel : #d6caca;
     --color-secundary-panel: #a4aaa5;
@@ -11,17 +11,24 @@
     --color-background-darker-gray : #444444;
     --color-lighter-blue : #57B5D2;
     --color-darker-blue: #00809B ;
-    --color-midle-gray : #00809B;
+    --color-midle-gray : #00809B; */
+    --color30 : #f3f3f3;
+    --color-midle-dark : #12405a;
+    --color : #157293;
+    --color60 : #1fadd4 ;
+    --color-ligther : #20dad8;
+    --color10 : #12182b;
+}   
 
+body{
+    background-image: url(https://images.unsplash.com/photo-1564399580075-5dfe19c205f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80) ;
 }
-
 
 body , #root{ 
     margin :0;
     padding: 0 ;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-background-white);
 }
 html, body, div, img {
     margin: 0;
