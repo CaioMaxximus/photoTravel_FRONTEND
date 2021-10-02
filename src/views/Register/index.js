@@ -44,12 +44,12 @@ export default function Register() {
         if (verifyData) {
             api.post("/users", {
                 nickname,
-                email,
                 description,
+                email,
                 password
             }).then(() => {
 
-                window.open("/gallery");
+                history.push("app/gallery");
             }).catch((e) => {
                 alert(e);
                 console.log(e);
@@ -61,7 +61,7 @@ export default function Register() {
     }
 
     function verifyData() {
-        return false;
+        return true;
     }
 
 
@@ -71,29 +71,37 @@ export default function Register() {
 
                 <div id="in-first-step">
                     <form action="">
-                        <div>
+                        <div className="form-separator" id="form-s-1">
                             <label htmlFor="nickname">NickName: </label>
                             <input name="nickname" type="text" value={nickname} onChange={(e) => setNickname(e.target.value)} />
                             <div className="floating-message" id="flt-msg-1">
-                                The nick need ...
+                                <p>The nick name must have between 5-15 characters and can
+                                    contain numbers, upper and lower letters
+                                </p>
                             </div>
                         </div>
-                        <div>
+                        <div className="form-separator" id="form-s-2">
                             <label htmlFor="email">Email:</label>
                             <input name="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
                             <div className="floating-message" id="flt-msg-2">
-                                The nick need ...
+                                <p>
+                                    Insert a valid email adresse
+                                </p>
                             </div>
                         </div>
-                        <div>
+                        <div className="form-separator" id="form-s-3">
                             <label htmlFor="password">Password: </label>
                             <input name="password" type="text" value={password} onChange={(e) => setPassword(e.target.value)} />
                             <div className="floating-message" id="flt-msg-3">
-                                The nick need .....................
+                                <p>
+                                    The password must contain at least one symbol({"{^?=+-@"}),
+                                    one number, one upper and one lower case letter, and should
+                                    have between 6-15 characters
+                                </p>
                             </div>
                         </div>
 
-                        <div>
+                        <div className="form-separator">
                             <label htmlFor="confirm-password">Confirm Password </label>
                             <input name="confirm-password" type="text" value={passwordConfirm} onChange={(e) => setPasswordConfirm(e.target.value)} />
                         </div>
