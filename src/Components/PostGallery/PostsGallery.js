@@ -6,8 +6,8 @@ import './style.css';
 class PostsGallery extends Component {
 
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             posts: []
         }

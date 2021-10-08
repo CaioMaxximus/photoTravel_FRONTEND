@@ -48,8 +48,8 @@ export default function Register() {
                 email,
                 password
             }).then(() => {
-
-                history.push("app/gallery");
+                history.replace("/app/gallery");
+                window.location.reload();
             }).catch((e) => {
                 alert(e);
                 console.log(e);
@@ -114,7 +114,7 @@ export default function Register() {
 
                 <div id="in-second-step">
                     <label htmlFor="description">Add a description about you: </label>
-                    <input type="text" />
+                    <input type="text" value = {description}  onChange = {(e) => setDescription(e.target.value)}/>
 
                     <button onClick={() => changeStep()} > Back</button>
                     <button onClick={() => { registerUser() }} > Registe</button>

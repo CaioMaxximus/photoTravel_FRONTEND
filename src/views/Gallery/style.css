@@ -1,10 +1,47 @@
-/* #gallery-page {
+#gallery-page {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    flex-direction: column;
 }
 
+#top-options{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 100%;
+    left : 0;
+}
+
+#top-options #search-options-gallery{
+    width: 5em;
+    background-color: var(--color30);
+}
+
+#top-options ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 4rem; 
+}
+#top-options ul:hover button{
+    display: flex;
+}
+
+#top-options ul button{
+    display: none;
+    
+}
+
+#user-post{
+    background-color: aqua;
+}
+
+
+/* 
 #gallery-page .images-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -23,4 +60,4 @@
     width: 100%;
     max-height: 630px;
     margin: 0.8rem 0;
-} */
+} */ 

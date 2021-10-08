@@ -1,11 +1,13 @@
 import React  from 'react';
+import { Link , useRouteMatch } from 'react-router-dom';
 import './style.css'
 
-export default function postCard(props){
+export default function PostCard(props){
 
-    let {imageUrl} = props.props;
+    const {imageUrl , nickname , id , numLikes} = props.props;
     console.log(props.props);
     console.log(imageUrl);
+    const match = useRouteMatch();
 
 
 
@@ -15,7 +17,9 @@ export default function postCard(props){
                 <p>numero de likes</p>
             </div>
         </header>
-        <img src= {imageUrl} />
-        <footer>by : user_nick</footer>
+        <Link to = {`${match.path}/${id}`}>
+            <img src= {imageUrl} />
+        </Link>
+        <footer>by : {nickname}</footer>
     </div>
 }
