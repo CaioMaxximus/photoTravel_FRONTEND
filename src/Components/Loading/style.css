@@ -1,0 +1,36 @@
+.loading{
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    
+}
+
+@keyframes resize {
+    0% {
+        transform: translateY(0px);
+    
+    }50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0px);
+
+    }
+}
+
+
+#dot-1{
+    animation: 0.8s linear 1s  infinite resize;
+}
+#dot-2{
+    animation: 0.8s linear 1.3s  infinite resize;
+}
+
+#dot-3{
+    animation: 0.8s linear 1.5s  infinite resize;
+}
+
