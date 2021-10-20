@@ -27,7 +27,7 @@
     width: 85%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: 0.5s linear 0.1s;
+    transition: 0.4s ease-in 0.1s;
     border-radius: 10px;
 
 
@@ -43,7 +43,6 @@
 
     position: absolute;
     display: grid;
-    grid-template-columns: 6fr 1fr;
     column-gap: 5px;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -58,6 +57,27 @@
 
 
 
+}
+
+#in-first-step{
+    grid-template-columns: 6fr 1fr;
+
+}
+
+#in-second-step{
+    grid-template-columns: 1fr 6fr;
+
+}
+#in-first-step button, #in-second-step button{
+    height: 60%;     
+    width: 90%;
+    background-color: rgba(149, 153, 153, 0.13);  
+    border: none;  
+}
+#in-first-step button:hover, #in-second-step button:hover{
+    background-color: rgba(149, 153, 153, 0.575);  
+    border: solid 1px black;  
+    border-radius: 5px;
 }
 
 #in-first-step form , #in-second-step form{
@@ -87,11 +107,11 @@
 }
 
 #form-s-2:hover #flt-msg-2{
-    display: block;
+    display: flex;
 }
 
 #form-s-3:hover #flt-msg-3{
-    display: block;
+    display: flex;
 }
 
 .floating-message{

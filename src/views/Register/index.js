@@ -109,15 +109,21 @@ export default function Register() {
 
                     </form>
 
-                    <button onClick={() => changeStep()} >Continue </button>
+                    <button onClick={() => changeStep()} >{">>>>"} </button>
                 </div>
 
                 <div id="in-second-step">
-                    <label htmlFor="description">Add a description about you: </label>
-                    <input type="text" value = {description}  onChange = {(e) => setDescription(e.target.value)}/>
+                    
+                        <button onClick={() => changeStep()} > Back</button>
 
-                    <button onClick={() => changeStep()} > Back</button>
-                    <button onClick={() => { registerUser() }} > Registe</button>
+                    
+                    <div>
+                        <label htmlFor="description">Add a description about you: </label>
+                        <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
+
+                        <button onClick={() => { registerUser() }} > Registe</button>
+
+                    </div>
 
                 </div>
 

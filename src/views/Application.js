@@ -13,13 +13,24 @@ export default function Application() {
 
   let [search_opt, setSearchOpt] = useState("posts");
   let [visibility, setVisibility] = useState("none");
-
+  let [creatorStatus , setCreatorStatus] = useState("Create Post");
   const match = useRouteMatch()
 
   // console.log(matchPage.url, matchPage.path);
 
   // console.log(`${matchPage.url}/gallery`)
   // console.log(`${matchPage.path}/perfil`)
+
+  function changeCreatorVisibility(){
+    if(creatorStatus == "Create Post"){
+      document.getElementById("creator").style.display = "block";
+      setCreatorStatus("Hide");
+    }else{
+      document.getElementById("creator").style.display = "none";
+      setCreatorStatus("Create Post");
+
+    }
+  }
   return (
     
     <BrowserRouter >
@@ -43,10 +54,9 @@ export default function Application() {
                   <li ><button onClick={function () { setSearchOpt("posts"); setVisibility("none") }}>posts</button></li>
                 </ul>
               </div>
-
-              <button>
-                Search
-              </button>
+                <button >
+                  Search
+                </button>
             </div>
             <div id="tools-bar">
               <nav>
@@ -74,10 +84,14 @@ export default function Application() {
 
 
           </div>
-          <div id="creator" >
+          <div id = "creator-btn">
+            <button onClick = {() =>{changeCreatorVisibility()}}>{creatorStatus}</button>
+          </div>
+          
+        </div>
+        <div id="creator" >
             <PostCreator></PostCreator>
           </div>
-        </div>
         <div id="views">
           <Switch>
             <Route path={`${match.path}/perfil`} >
@@ -102,11 +116,3 @@ export default function Application() {
 
 }
 
-
-function A() {
-  return <div>A</div>
-}
-
-function B() {
-  return <div>B</div>
-}

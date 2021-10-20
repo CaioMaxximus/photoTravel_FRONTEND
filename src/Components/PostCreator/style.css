@@ -1,46 +1,88 @@
-#post-creator .content{
-    height: 100%;
-
-}
-
-
-
-#post-creator .content #form-creator{
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-darker-blue);
+#post-creator {
+    min-width: 100%;
+    min-height: 100%;
+    position: relative;
+    background-color: rgba(63, 65, 65, 0.747);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+/* .content-post-creator{
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+} */
+
+
+
+#form-creator{
+    max-width: 60%;
+    max-height: 60%;
+    min-width: 50%;
+    min-height: 50%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    border: solid 1px black;
+    background-color: var(--color-darker-blue);
     transition: 0.2s;
 }
 
-#post-creator .content #form-creator label, input {
-    height: 2em;
 
-}
-
-#post-creator .content #form-creato #tags-creator{
+#post-creator-img-link{
     display: flex;
-    flex-direction: column;
-    column-gap: 1em;
-    height: 10em;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+#post-creator-img-link input {
+    max-width: 50%;
+}
+#post-creator-img{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 40%;
+    max-height: 40%;
 
 }
 
-#tags-creator #tags-area{
+#post-creator-img img{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+#form-creator label, input {
+    height: 2em;
+}
+
+#tags-creator{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1em;
+    min-height: 30%;
+    max-height: 30%;
+    width: 100%;
+
+}
+
+#tags-area{
     overflow-x: hidden;
     overflow-y: scroll;
-    max-width: 100%;
+    max-width: 90%;
     max-height: 5em;
 }
 #tags-creator input{
-    width: 100%;
+    width: 90%;
     height: 1.5em;
 }
 
-#post-creator .content #visibilty-creator-changer-btn:hover #form-creator{
-    display: none;
-    background-color: blue;
-}
+
+

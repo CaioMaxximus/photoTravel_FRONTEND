@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import api from '../../resources/api';
 import './style.css'
 
 
@@ -9,9 +10,23 @@ export default function PostCreator() {
 
 
     let [tags, setTags] = useState([]);
+    let [imageUrl, setimageUrl] = useState("");
+
     let [tagString, setTagString] = useState("");
     let [actualTag, setActualTag] = useState("");
-    let [creatorDisplay , setCreatorDisplay] = useState("none");
+    let [creatorDisplay, setCreatorDisplay] = useState("none");
+
+
+    async function createPost() {
+
+        console.log("aqui");
+        await api.post("/posts", { tags, imageUrl }).then(r => {
+            console.log("response");
+        }).catch(e => {
+            alert(e);
+        })
+        console.log("aqui2");
+    }
 
     function tagsMarker(e) {
 
@@ -31,36 +46,44 @@ export default function PostCreator() {
 
     }
 
-    function changeVisibility(){
-        if(creatorDisplay =="none"){
+    function changeVisibility() {
+        if (creatorDisplay == "none") {
             setCreatorDisplay("flex");
         }
-        else{
+        else {
             setCreatorDisplay("none");
         }
     }
 
+
     return (<div id="post-creator">
         {/* trocar por form talvez */}
-        <div className="content" >
-            <form action="" id = "form-creator" style = {{display : creatorDisplay}}>
+        <div id="form-creator" >
+            <div id="post-creator-img-link">
                 <label htmlFor="link">ImageLink:</label>
-                <input name="link" type="text" />
-                <label htmlFor="tags">Add some tags to you image..</label>
-                <div id="tags-creator"  >
-                    <div id="tags-area">{tags.map(tag => <button className="tag-miniature-creation">{tag}</button>)}</div>
-                    <input type="text" onChange={(e) =>
-                        tagsMarker(e)}
-                        value={actualTag} />
-                </div>
+                <input name="link" value={imageUrl} type="text" onChange={(e) => setimageUrl(e.target.value)} />
 
-            </form>
-            <button id = "visibilty-creator-changer-btn"onClick ={() => changeVisibility()} >create</button>
-
-
-            
-        </div>
-        <div>
             </div>
+            <div id="post-creator-img">
+                <img src={imageUrl} alt="" />
+
+            </div>
+            <div id="tags-creator"  >
+                <label htmlFor="tags">Add some tags to you image..</label>
+
+                <div id="tags-area">{tags.map(tag => <button className="tag-miniature-creation">{tag}</button>)}</div>
+                <input type="text" onChange={(e) =>
+                    tagsMarker(e)}
+                    value={actualTag} />
+            </div>
+            <button onClick={() => { createPost() }}>create post</button>
+
+        </div>
+        <button id="visibilty-creator-changer-btn" onClick={() => changeVisibility()} >create</button>
+
+
+
+        <div>
+        </div>
     </div>)
 }
