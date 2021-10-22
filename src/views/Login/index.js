@@ -17,8 +17,10 @@ export default function Login(props) {
         await api.post("/login", {
             nickname, password
         }).then((res) => {
-            window.localStorage = res;
-            history.push("app/gallery");
+            console.log(res)
+            window.localStorage.setItem("user-local-token", res.data);
+            history.push("/app/gallery");
+            window.location.reload();
         }).catch(err => {
             alert("dados inválidos");
         });
@@ -35,13 +37,13 @@ export default function Login(props) {
 
     return (
         <div id="login-screen">
-            <form className="form-user-area">
+            <div  className="form-user-area">
                 <label htmlFor="name">NickName or Email</label>
-                <input type="text" name="nick-email" />
+                <input type="text" name="nick-email" value ={nickname} onChange = {(e) => setNickname(e.target.value)}/>
                 <label htmlFor="password">Password</label>
-                <input type="password" name="password" />
-                <button>Login</button>
-            </form>
+                <input type="password" name="now-password" value = {password} onChange = {(e) => setPassword(e.target.value)}/>
+                <button onClick = {() => login()}>Login</button>
+            </div>
             <div>
                     <Link to={`register`}>Ainda Não possuo uma conta</Link>
 

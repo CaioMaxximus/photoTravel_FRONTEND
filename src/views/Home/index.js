@@ -16,10 +16,10 @@ function Home(props) {
     const history = useHistory();
 
 
-    ///Coleta os dados do perfil do usuario
-    async function getUserData() {
-        const userData = await api.get("")
-    }
+    // ///Coleta os dados do perfil do usuario
+    // async function getUserData() {
+    //     const userData = await api.get("users/",{'Authorization': `Bearer ${}`})
+    // }
 
 
 
@@ -35,10 +35,10 @@ function Home(props) {
                 </div>
                 <div id="user-perfil-options">
                     <div>
-                            <button to="" onClick = {function() { history.push("/credentials/login");window.location.reload()}}>Sair-da Conta</button>
+                            <button  onClick = {function() { history.replace("/credentials/login");window.location.reload()}}>Sair-da Conta</button>
                         </div>
                         <div>
-                            <button to="/perfil-config" replace>Editar Perfil</button>
+                            <button >Editar Perfil</button>
                         </div>
                        
 

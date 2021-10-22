@@ -7,13 +7,13 @@ import Register from './views/Register/Register'
 export default function Routes() {
 
     return <BrowserRouter>
-        <Switch>
+        {/* <Switch>
             <Route path="/home" exact component={Home}> </Route>
             <Route path="/gallery" component={Gallery}></Route>
             <Route path="/about" component={ } ></Route>
             <Route path="/register" component={Register} ></Route>
 
-        </Switch>
+        </Switch> */}
     </BrowserRouter>
 }
 

@@ -16,6 +16,11 @@ export default function Application() {
   let [creatorStatus , setCreatorStatus] = useState("Create Post");
   const match = useRouteMatch()
 
+  const userToken = localStorage.getItem("user-local-token");
+  
+  function componentWillMount(){
+    console.log("mounted");
+  }
   // console.log(matchPage.url, matchPage.path);
 
   // console.log(`${matchPage.url}/gallery`)
