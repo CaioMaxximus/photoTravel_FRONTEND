@@ -48,7 +48,7 @@ export default function Register() {
                 email,
                 password
             }).then(() => {
-                history.replace("/app/gallery");
+                history.replace("/credentials/login");
                 window.location.reload();
             }).catch((e) => {
                 alert(e);
@@ -91,7 +91,7 @@ export default function Register() {
                         </div>
                         <div className="form-separator" id="form-s-3">
                             <label htmlFor="password">Password: </label>
-                            <input name="password" type="text" value={password} onChange={(e) => setPassword(e.target.value)} />
+                            <input name="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                             <div className="floating-message" id="flt-msg-3">
                                 <p>
                                     The password must contain at least one symbol({"{^?=+-@"}),
@@ -103,7 +103,7 @@ export default function Register() {
 
                         <div className="form-separator">
                             <label htmlFor="confirm-password">Confirm Password </label>
-                            <input name="confirm-password" type="text" value={passwordConfirm} onChange={(e) => setPasswordConfirm(e.target.value)} />
+                            <input name="confirm-password" type="password" value={passwordConfirm} onChange={(e) => setPasswordConfirm(e.target.value)} />
                         </div>
 
 

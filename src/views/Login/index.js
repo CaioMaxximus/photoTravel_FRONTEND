@@ -17,9 +17,9 @@ export default function Login(props) {
         await api.post("/login", {
             nickname, password
         }).then((res) => {
-            console.log(res)
+            console.log(res.data)
             window.localStorage.setItem("user-local-token", res.data);
-            history.push("/app/gallery");
+            history.replace("/app/gallery");
             window.location.reload();
         }).catch(err => {
             alert("dados inválidos");
