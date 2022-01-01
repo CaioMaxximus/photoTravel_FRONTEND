@@ -16,7 +16,7 @@ export default function CredentialConnect() {
         <div id = "logo-area">
             <img src={logo} alt="" />
         </div>
-        <div id="credencial-area">
+            <div id="credencial-area">
 
             <Switch>
                 <Route path={`${match.path}/register`} component={Register}></Route>

@@ -13,12 +13,12 @@ export default function Application() {
 
   let [search_opt, setSearchOpt] = useState("posts");
   let [visibility, setVisibility] = useState("none");
-  let [creatorStatus , setCreatorStatus] = useState("Create Post");
+  let [creatorStatus, setCreatorStatus] = useState("Create Post");
   const match = useRouteMatch()
 
   const userToken = localStorage.getItem("user-local-token");
-  
-  function componentWillMount(){
+
+  function componentWillMount() {
     console.log("mounted");
   }
   // console.log(matchPage.url, matchPage.path);
@@ -26,18 +26,18 @@ export default function Application() {
   // console.log(`${matchPage.url}/gallery`)
   // console.log(`${matchPage.path}/perfil`)
 
-  function changeCreatorVisibility(){
-    if(creatorStatus == "Create Post"){
+  function changeCreatorVisibility() {
+    if (creatorStatus == "Create Post") {
       document.getElementById("creator").style.display = "block";
       setCreatorStatus("Hide");
-    }else{
+    } else {
       document.getElementById("creator").style.display = "none";
       setCreatorStatus("Create Post");
 
     }
   }
   return (
-    
+
     <BrowserRouter >
       <div>
 
@@ -51,17 +51,19 @@ export default function Application() {
             <div id="search-bar">
               <div id="search-options"
                 onMouseOver={() => setVisibility("grid")}
-                onMouseOut={() => setVisibility("none")}
-              >{search_opt}
+                onMouseOut={() => setVisibility("none")}>
+                {search_opt}
                 <ul style={{ display: visibility }}>
                   <li ><button onClick={function () { setSearchOpt("users"); setVisibility("none") }}>users</button></li>
-                  <input type="text" placeholder="Search.." />
                   <li ><button onClick={function () { setSearchOpt("posts"); setVisibility("none") }}>posts</button></li>
                 </ul>
               </div>
-                <button >
-                  Search
-                </button>
+              <input type="text" placeholder="Search.." />
+
+              <button >
+                Search
+              </button>
+
             </div>
             <div id="tools-bar">
               <nav>
@@ -89,21 +91,21 @@ export default function Application() {
 
 
           </div>
-          <div id = "creator-btn">
-            <button onClick = {() =>{changeCreatorVisibility()}}>{creatorStatus}</button>
+          <div id="creator-btn">
+            <button onClick={() => { changeCreatorVisibility() }}>{creatorStatus}</button>
           </div>
-          
+
         </div>
         <div id="creator" >
-            <PostCreator></PostCreator>
-          </div>
+          <PostCreator></PostCreator>
+        </div>
         <div id="views">
           <Switch>
             <Route path={`${match.path}/perfil`} >
               a
               <Home />
             </Route>
-            <Route  path={`${match.path}/gallery`} >
+            <Route path={`${match.path}/gallery`} >
               Gallery
               <Gallery />
             </Route>
