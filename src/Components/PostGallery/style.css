@@ -4,12 +4,12 @@
 }
 
 .images-container{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center; 
     column-gap: 4rem;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 .images-container #column-one{

@@ -29,7 +29,7 @@ function Home(props) {
         if (!token) {
 
             history.replace("/credentials/login");
-            window.location.reload();
+            window.reload();
             alert("you must be logged to acess this page!");
         } else {
             var conf = {
@@ -38,10 +38,10 @@ function Home(props) {
             api.get("/users/personal",
                 {headers : { "Authorization": `Bearer ${token}` }}).then(() =>
                     setLoginStatus("logged")).catch(e => {
-                        // history.replace("/credentials/login");
-                        // window.location.reload();
+                        history.replace("/credentials/login");
+                        window.location.reload();
                         alert("you must be logged to acess this page!");
-                    });
+                    })
         }
     }
 
@@ -81,7 +81,7 @@ function Home(props) {
                     </div>
 
                 </div>
-
+            
 
                 {/* 
             <div className="panel">

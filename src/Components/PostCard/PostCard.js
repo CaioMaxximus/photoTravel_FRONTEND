@@ -4,14 +4,16 @@ import './style.css'
 
 export default function PostCard(props){
 
-    const {imageUrl , nickname , id , numLikes} = props.props;
+    console.log(props)
+    const {imageUrl , nickname , numLikes} = props.props;
+    const id = props.id;
     console.log(props.props);
     console.log(imageUrl);
     const match = useRouteMatch();
+    const name_id = `post-card-${id}`
 
 
-
-    return  <div className = "post_card">
+    return  <div className = "post_card" key ={name_id}>
         <header>
             <div>
                 <p>numero de likes</p>

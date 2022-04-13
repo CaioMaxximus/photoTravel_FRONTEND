@@ -19,8 +19,9 @@ export default function PostCreator() {
 
     async function createPost() {
 
+        const $token = localStorage.getItem("user-local-token");
         console.log("aqui");
-        await api.post("/posts", { tags, imageUrl }).then(r => {
+        await api.post("/posts", { tags, imageUrl } ,{headers : {Authorization : `Bearer ${$token}`}}).then(r => {
             console.log("response");
         }).catch(e => {
             alert(e);
