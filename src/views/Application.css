@@ -221,9 +221,10 @@ nav {
 
 
 #views {
+    background-color: var(--color60);
     height: auto;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 7.5rem;
-    background-color: var(--color10);
+    border-radius: 10px;
 }

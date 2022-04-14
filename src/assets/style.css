@@ -18,10 +18,11 @@
     --color60 : #1fadd4 ;
     --color-ligther : #20dad8;
     --color10 : #12182b;
+    --color-background-app : #ebeae6;
 }   
 
 body{
-    background-image: url(https://cdna.artstation.com/p/assets/images/images/041/923/686/large/joel-chin-kronii-post-copy.jpg?1633075521) ;
+    background-color: var(--color-background-app);
 }
 
 body , #root{ 

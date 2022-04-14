@@ -31,7 +31,7 @@ function Gallery(prop) {
                 </Route>
                 <Route path={`${match.path}/:postId`} >
 
-                    <PostComplete></PostComplete>
+                    <PostComplete ></PostComplete>
 
                 </Route>
             </Switch>
