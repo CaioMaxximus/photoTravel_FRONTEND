@@ -42,6 +42,10 @@
     background-color: aqua;
 }
 
+#post-complete-view{
+    width: 70%;
+    height: 80%;
+}
 
 /* 
 #gallery-page .images-container {

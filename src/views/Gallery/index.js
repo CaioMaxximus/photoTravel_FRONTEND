@@ -30,8 +30,10 @@ function Gallery(prop) {
                     </div>
                 </Route>
                 <Route path={`${match.path}/:postId`} >
+                    <div id = "post-complete-view">
+                     <PostComplete ></PostComplete>
 
-                    <PostComplete ></PostComplete>
+                    </div>
 
                 </Route>
             </Switch>

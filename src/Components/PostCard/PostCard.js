@@ -5,18 +5,17 @@ import './style.css'
 export default function PostCard(props){
 
     console.log(props)
-    const {imageUrl , nickname , numLikes} = props.props;
-    const id = props.id;
+    const {imageUrl , nickname , numLikes, id} = props.props;
     console.log(props.props);
     console.log(imageUrl);
     const match = useRouteMatch();
-    const name_id = `post-card-${id}`
+    // const name_id = `post-card-${id}`
 
 
-    return  <div className = "post_card" key ={name_id}>
+    return  <div className = "post_card">
         <header>
             <div>
-                <p>numero de likes</p>
+                <p>{numLikes}</p>
             </div>
         </header>
         <Link to = {`${match.path}/${id}`}>

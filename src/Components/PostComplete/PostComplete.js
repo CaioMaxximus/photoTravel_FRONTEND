@@ -4,6 +4,7 @@ import {useParams} from "react-router-dom";
 import Api from "../../resources/api"
 import Loading from "../Loading/Loading";
 import { useEffect } from "react";
+import './style.css';
 export default function PostComplete() {
 
     // const id = useLocation().pathname.split("/")[3];
@@ -27,29 +28,28 @@ export default function PostComplete() {
         if (post === []) {
             return <Loading></Loading>
         } else {
-            return (<div id = "complete-post">
-                <div id= "user-post-nickname">
+            return (<div id = "post-complete">
+                <div id= "post-user-nickname">
                     <span>{post.ownerUser}</span>
                 </div>
-                <div id  = "user-post-image">
-                    {/* <img src={post.imageUrl} alt="" /> */}
+                <div id  = "post-user-image">
+                    <img src={post.imageUrl} alt="" />
                 </div>
-                <div id = "user-post-likes">
-
+                <div id = "post-user-likes">
+                    {post.numLikes} LIKES
                 </div>
-                <div id = "user-post-tags">
-                {Array(post.tags).map((e) => <div>{e} </div>)}
+                <div id = "post-user-tags">
+                {Array(post.tags).map((e) => <div>  <button>{e}</button> </div>)}
                 </div>
-                carregado 
             </div>)
         }
 
     }
 
 
-    return (<div>
+    return (<div >
 
-        sa
+        
         {show()
         }
     </div>)

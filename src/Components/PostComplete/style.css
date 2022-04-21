@@ -1,0 +1,21 @@
+#post-complete{
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#post-user-nickname{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3em;
+}
+
+#post-user-image{
+    display: flex;
+    justify-content: center;
+    min-height: 5em;
+    
+}
