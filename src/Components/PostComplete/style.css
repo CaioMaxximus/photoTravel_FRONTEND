@@ -17,5 +17,31 @@
     display: flex;
     justify-content: center;
     min-height: 5em;
+    background-color: rgb(202, 222, 223);
     
 }
+
+#post-user-likes{
+    display : flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#post-user-tags{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#post-like-btn{
+    border: black 1px solid;
+    border-radius: 3px;
+}
+
+#post-like-btn button{
+    background-color: transparent;
+    border: none;
+}
+
+

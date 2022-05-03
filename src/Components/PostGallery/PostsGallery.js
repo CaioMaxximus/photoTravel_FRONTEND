@@ -35,15 +35,16 @@ class PostsGallery extends Component {
     render() {
         return <div id="posts-gallery-view">
             <div className="images-container">
-                <div id="column-one">
+                {/* <div id="column-one">
                     {this.state.posts.map((post, index) => index % 2 !== 0 ? <PostCard key = {index} props={post}></PostCard> : '')}
 
                 </div>
 
                 <div id="column-two">
                     {this.state.posts.map((post, index) => index % 2 === 0 ?  <PostCard key = {index} props={post }></PostCard>: '')}
-                </div>
+                </div> */}
 
+                {this.state.posts.map((post, index) =><PostCard key = {index} props={post}></PostCard>)}
             </div>
         </div>
     }
