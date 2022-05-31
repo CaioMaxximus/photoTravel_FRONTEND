@@ -38,7 +38,7 @@ export default function Application() {
   }
   return (
 
-    <BrowserRouter >
+    <BrowserRouter  forceRefresh = {true}>
       <div>
 
         <div id="top-elements">
@@ -100,12 +100,12 @@ export default function Application() {
           <PostCreator></PostCreator>
         </div>
         <div id="views">
-          <Switch>
-            <Route path={`${match.path}/perfil`} >
+          <Switch exact>
+            <Route  path={`${match.path}/perfil`} >
               a
               <Home />
             </Route>
-            <Route path={`${match.path}/gallery`} >
+            <Route  path={`${match.path}/gallery`} >
               Gallery
               <Gallery />
             </Route>

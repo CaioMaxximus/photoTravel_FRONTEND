@@ -38,7 +38,7 @@ export default function Login(props) {
     return (
         <div id="login-screen">
             <div  className="form-user-area">
-                <label htmlFor="name">NickName or Email</label>
+                <label htmlFor="name">NickName</label>
                 <input type="text" name="nick-email" value ={nickname} onChange = {(e) => setNickname(e.target.value)}/>
                 <label htmlFor="password">Password</label>
                 <input type="password" name="now-password" value = {password} onChange = {(e) => setPassword(e.target.value)}/>

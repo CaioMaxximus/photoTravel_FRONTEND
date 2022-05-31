@@ -49,7 +49,7 @@ function Home(props) {
 
         if (loginStatus) {
             return (<div className="profile-content">
-
+                
                 <div id="lateral-bar">
                     <div id="user-perfil-photo">
                         Foto usuario

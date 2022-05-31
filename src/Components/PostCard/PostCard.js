@@ -1,4 +1,5 @@
 import React  from 'react';
+import { NavLink } from 'react-router-dom';
 import { Link , useRouteMatch } from 'react-router-dom';
 import './style.css'
 
@@ -18,9 +19,10 @@ export default function PostCard(props){
                 <p>{numLikes}</p>
             </div>
         </header>
-        <Link to = {`${match.path}/${id}`}>
-            <img src= {imageUrl} />
-        </Link>
+        <Link to = {`/app/gallery/${id}`} replace = {true}
+            onClick = {() =>{setTimeout(() => {window.location.reload()},1) }}
+        ><img src= {imageUrl} />
+        </  Link>
         <footer>by : {nickname}</footer>
     </div>
 }
