@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import './style.css'
 import PostsGallery from '../../Components/PostGallery/PostsGallery.js'
-import { Switch, Route, useRouteMatch } from 'react-router';
+import { Switch, Route, useRouteMatch, } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import PostCard from '../../Components/PostCard/PostCard';
 import PostComplete from '../../Components/PostComplete/PostComplete';
 import Loading from '../../Components/Loading/Loading';
+
+
 function Gallery(prop) {
 
     let [actualStateSearch, setActualStateSearch] = useState("likes");
@@ -14,8 +16,8 @@ function Gallery(prop) {
     return (
         <div id="gallery-page">
 
-            <Switch>
-                <Route exact path={`${match.path}`}>
+            {/* <Switch> */}
+                <Route  path={`${match.path}`}>
                     <div id="top-options">
                         <div id="search-options-gallery">
                             <ul>Sort by: {actualStateSearch}
@@ -24,19 +26,32 @@ function Gallery(prop) {
                             </ul>
                         </div>
 
-                    </div>
-                    <div id="gallery-view">
-                        <PostsGallery apiLink={`post/?mode=${actualStateSearch}`}></PostsGallery>
-                    </div>
+                    </div>  
+                    <Switch  >
+                        <div id="gallery-view">
+
+                            <Route  exact path={`${match.path}`}  >
+                            {"Normal  Mode " + `${match.path}/search/:tags`}
+                                <PostsGallery apiLink={`post/?mode=${actualStateSearch}`} search = {false}/>
+                            </Route>
+                            {"oi"}
+                            <Route   path={`${match.url}/search/:tags`}>
+                                {"Search Mode Tags"}
+                                <PostsGallery apiLink = {`/posts/search/tags/`} search ={true}/>
+                            </Route>
+                        </div>
+
+                    </Switch>
+
                 </Route>
-                <Route path={`${match.path}/:postId`} >
-                    <div id = "post-complete-view">
-                     <PostComplete ></PostComplete>
+                <Route path={`${match.path}/post/:postId`} >
+                    <div id="post-complete-view">
+                        <PostComplete ></PostComplete>
 
                     </div>
 
                 </Route>
-            </Switch>
+            {/* </Switch > */}
 
 
             {/* <div className="images-container">
@@ -54,7 +69,7 @@ function Gallery(prop) {
             </div>
 
         </div> */}
-        </div>
+        </div >
     )
 }
 

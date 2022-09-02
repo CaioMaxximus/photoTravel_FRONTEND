@@ -1,7 +1,8 @@
 import React, { Component, useState } from "react";
+import {withRouter} from "react-router"
 import api from '../../resources/api.js'
 import PostCard from '../PostCard/PostCard'
-import './style.css';
+import './style.css'
 
 class PostsGallery extends Component {
 
@@ -14,12 +15,27 @@ class PostsGallery extends Component {
     }
 
     async componentDidMount() {
-
-        const posts = await api.get("/posts/all",);
-        console.log(posts.data);
-        this.setState({ posts: posts.data });
-
+        let search = this.props.search;
+        if(search){
+            console.log(this.props)
+            let tags  = this.props.match.params.tags;
+            let tagsSearch = tags.split("%").join(" ");
+            api.get(`${this.props.apiLink}${tagsSearch}`).then(
+                r =>{
+                    this.setState({posts: r.data})
+                }
+            ).catch(e=>{
+                console.log(e)
+            })
+        }else{
+            const posts = await api.get("/posts/all",);
+            console.log(posts.data);
+            this.setState({ posts: posts.data });
+    
+        }
+        
     }
+
 
     // renderGallery(post, index) {
 
@@ -44,7 +60,8 @@ class PostsGallery extends Component {
                     {this.state.posts.map((post, index) => index % 2 === 0 ?  <PostCard key = {index} props={post }></PostCard>: '')}
                 </div> */}
 
-                {this.state.posts.map((post, index) =><PostCard key = {index} props={post}></PostCard>)}
+                {this.state.post === [] ? "DONT FIND ANY RESULT :(" : this.state.posts.map((post, index) =>
+                <PostCard key = {index} props={post}></PostCard>)}
             </div>
         </div>
     }
@@ -52,4 +69,4 @@ class PostsGallery extends Component {
 
 }
 
-export default PostsGallery;
+export default withRouter(PostsGallery);

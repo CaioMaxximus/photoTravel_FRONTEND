@@ -19,7 +19,7 @@ export default function PostCard(props){
                 <p>{numLikes}</p>
             </div>
         </header>
-        <Link to = {`/app/gallery/${id}`} replace = {true}
+        <Link to = {`/app/gallery/post/${id}`} replace = {true}
             onClick = {() =>{setTimeout(() => {window.location.reload()},1) }}
         ><img src= {imageUrl} />
         </  Link>

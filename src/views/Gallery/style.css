@@ -20,7 +20,7 @@
 
 #top-options #search-options-gallery{
     width: 5em;
-    background-color: var(--color30);
+    /* background-color: var(--color30); */
 }
 
 #top-options ul{
@@ -39,7 +39,7 @@
 }
 
 #user-post{
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 #post-complete-view{
