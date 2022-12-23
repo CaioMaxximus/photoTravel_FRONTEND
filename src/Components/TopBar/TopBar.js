@@ -45,13 +45,17 @@ export default function TopBar(props) {
                         <li ><button onClick={function () { setSearchOpt("posts"); setVisibility("none") }}>posts</button></li>
                     </ul>
                 </div>
-                <form>
-                    <input type="text" placeholder="Search.." value={searchArea} onChange={(e) => setSearchArea(e.target.value)} />
+                <div id="form-search">
 
-                    <button id = "search-buton" onClick={() => search()}>
-                        Search
-                    </button>
-                </form>
+                    <form>
+                        <input type="text" placeholder="Search.." value={searchArea} onChange={(e) => setSearchArea(e.target.value)} />
+
+                        <button id="search-buton" onClick={() => search()}>
+                            Search
+                        </button>
+                    </form>
+                </div>
+
 
 
             </div>
