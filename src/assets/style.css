@@ -12,13 +12,14 @@
     --color-lighter-blue : #57B5D2;
     --color-darker-blue: #00809B ;
     --color-midle-gray : #00809B; */
-    --color30 : #f3f3f3;
+    --color30 : #d25516;
     --color-midle-dark : #12405a;
     --color : #157293;
-    --color60 : #1fadd4 ;
+    --color60 : #27a4d4 ;
     --color-ligther : #20dad8;
-    --color10 : #12182b;
-    --color-background-app : #ebeae6;
+    --color10 : #efefef;
+    --color-background-app : #efefef;
+    --color-gallery-background : #00074a
 }   
 
 body{

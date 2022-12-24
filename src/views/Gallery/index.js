@@ -17,40 +17,40 @@ function Gallery(prop) {
         <div id="gallery-page">
 
             {/* <Switch> */}
-                <Route  path={`${match.path}`}>
-                    <div id="top-options">
-                        <div id="search-options-gallery">
-                            <ul>Sort by: {actualStateSearch}
-                                <button onClick={function () { setActualStateSearch("date") }}><li>Date</li></button>
-                                <button onClick={function () { setActualStateSearch("likes") }}><li>Likes</li></button>
-                            </ul>
-                        </div>
+            <Route path={`${match.path}`}>
+                <div id="top-options">
+                    <div id="search-options-gallery">
+                        Sort by: {actualStateSearch}
+                        <ul>
+                            <button onClick={function () { setActualStateSearch("date") }}><li>Date</li></button>
+                            <button onClick={function () { setActualStateSearch("likes") }}><li>Likes</li></button>
+                        </ul>
+                    </div> 
+                </div>
+                <Switch  >
+                    <div id="gallery-view">
 
-                    </div>  
-                    <Switch  >
-                        <div id="gallery-view">
-
-                            <Route  exact path={`${match.path}`}  >
+                        <Route exact path={`${match.path}`}  >
                             {"Normal  Mode " + `${match.path}/search/:tags`}
-                                <PostsGallery apiLink={`post/?mode=${actualStateSearch}`} search = {false}/>
-                            </Route>
-                            {"oi"}
-                            <Route   path={`${match.url}/search/:tags`}>
-                                {"Search Mode Tags"}
-                                <PostsGallery apiLink = {`/posts/search/tags/`} search ={true}/>
-                            </Route>
-                        </div>
-
-                    </Switch>
-
-                </Route>
-                <Route path={`${match.path}/post/:postId`} >
-                    <div id="post-complete-view">
-                        <PostComplete ></PostComplete>
-
+                            <PostsGallery apiLink={`post/?mode=${actualStateSearch}`} search={false} />
+                        </Route>
+                        {"oi"}
+                        <Route path={`${match.url}/search/:tags`}>
+                            {"Search Mode Tags"}
+                            <PostsGallery apiLink={`/posts/search/tags/`} search={true} />
+                        </Route>
                     </div>
 
-                </Route>
+                </Switch>
+
+            </Route>
+            <Route path={`${match.path}/post/:postId`} >
+                <div id="post-complete-view">
+                    <PostComplete ></PostComplete>
+
+                </div>
+
+            </Route>
             {/* </Switch > */}
 
 

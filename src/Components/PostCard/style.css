@@ -9,6 +9,8 @@
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    border : var(--color30) 1px solid;
+    border-radius: 8px;
 }
 
 .post_card header{
