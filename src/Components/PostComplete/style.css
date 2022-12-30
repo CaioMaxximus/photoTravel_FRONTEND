@@ -3,6 +3,7 @@
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    row-gap: 1rem;
     
 }
 
@@ -11,6 +12,11 @@
     align-items: center;
     justify-content: center;
     height: 3em;
+    background-color: var(--color60);
+    border-radius: 4px;
+    color: var(--color10);
+    font-family: var(--font-subtitles);
+    font-size: var(--font-size-subtitles);
 }
 
 #post-user-image{
@@ -26,6 +32,16 @@
     justify-content: center;
     flex-direction: row;
     justify-content: space-around;
+    height: 3rem;
+    align-items: center;
+}
+
+#container-likes {
+    background-color: var(--color30);
+    padding: 0.5rem;
+    /* border: solid 1px var(--color10); */
+    border-radius: 5px;
+
 }
 
 #post-user-tags{
@@ -35,7 +51,7 @@
 }
 
 #post-like-btn{
-    border: black 1px solid;
+    /* border: black 1px solid; */
     border-radius: 3px;
 }
 

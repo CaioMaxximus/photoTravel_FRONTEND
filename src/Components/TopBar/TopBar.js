@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink, useRouteMatch, Link, useHistory } from 'react-router-dom';
 import './style.css'
 
-
+const sortIcon = require("../../assets/icons/sort_FILL0_wght400_GRAD0_opsz48.svg")
 const logo = require('../../assets/images/InfiteTravelLogoNotBackground.png')
 
 
@@ -23,10 +23,12 @@ export default function TopBar(props) {
         //     console.log(r)
         // })
         let searchParameter = searchArea.replace(" ", "%")
-        history.replace("/app/gallery/search/" + searchArea);
+        history.replace("/app/gallery/posts/search/" + searchArea + "sort");
         window.reload()
 
     }
+    let [actualStateSearch, setActualStateSearch] = useState("likes");
+
 
     return <div id="top-elements">
 
@@ -44,6 +46,18 @@ export default function TopBar(props) {
                         <li ><button onClick={function () { setSearchOpt("users"); setVisibility("none") }}>users</button></li>
                         <li ><button onClick={function () { setSearchOpt("posts"); setVisibility("none") }}>posts</button></li>
                     </ul>
+                </div>
+                <div id="top-options">
+                    <div id="search-options-gallery">
+                        <div>
+                            <p>{actualStateSearch}</p>
+                            <img src={sortIcon} alt="sort_icon" />
+                        </div>
+                        <ul>
+                            <button onClick={function () { setActualStateSearch("date") }}><li>Date</li></button>
+                            <button onClick={function () { setActualStateSearch("likes") }}><li>Likes</li></button>
+                        </ul>
+                    </div>
                 </div>
                 <div id="form-search">
 
@@ -66,7 +80,7 @@ export default function TopBar(props) {
                             <NavLink to={`${path}/perfil`}   ><button>Home</button></NavLink>
                         </li>
                         <li>
-                            <NavLink to={`${path}/gallery`} ><button >Gallery</button></NavLink>
+                            <NavLink to={`${path}/gallery/posts`} ><button >Gallery</button></NavLink>
                         </li>
                         <li><button>About</button>
                             <ul>
@@ -82,6 +96,7 @@ export default function TopBar(props) {
                     </ul>
                 </nav>
             </div>
+
         </div>
     </div>
 

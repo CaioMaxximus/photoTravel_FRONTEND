@@ -6,17 +6,14 @@ import api from '../../resources/api.js'
 import { BrowserRouter, Link, NavLink, useHistory } from 'react-router-dom'
 import Loading from '../../Components/Loading/Loading'
 
-const panelImg1 = require('../../assets/images/mostafa-meraji-l7mA-KmHXnc-unsplash.jpg')
-const panelImg2 = require('../../assets/images/mostafa-meraji-TtWStH-JuL8-unsplash.jpg')
-const panelImg3 = require('../../assets/images/mostafa-meraji-Z_WogC_UONo-unsplash.jpg')
-const panelImg4 = require('../../assets/images/svetlana-gumerova-CPJ1yQSa3L0-unsplash.jpg')
 
 function Home(props) {
 
 
     const history = useHistory();
     let [loginStatus, setLoginStatus] = useState(null);
-
+    const [nickname,setNickname] = useState("");
+    const [description , setDescription] = useState("");
 
     // ///Coleta os dados do perfil do usuario
     // async function getUserData() {
@@ -36,8 +33,12 @@ function Home(props) {
                 headers :{Authorization :  `Bearer ${token}`   }
             }
             api.get("/users/personal",
-                {headers : { "Authorization": `Bearer ${token}` }}).then(() =>
-                    setLoginStatus("logged")).catch(e => {
+                {headers : { "Authorization": `Bearer ${token}` }}).
+                then((r) =>{
+                    setLoginStatus("logged")
+                    setNickname(r.data.nickname)
+                    setDescription(r.data.description)
+                    console.log(r)}).catch(e => {
                         history.replace("/credentials/login");
                         window.location.reload();
                         alert("you must be logged to acess this page!");
@@ -64,8 +65,8 @@ function Home(props) {
 
                     </div>
                     <div id="user-perfil-description">
-                        <span>NickName : { }</span>
-                        <span>Description : { } </span>
+                        <p>NickName : {nickname}</p>
+                        <p>Description : {description} </p>
 
                     </div>
 

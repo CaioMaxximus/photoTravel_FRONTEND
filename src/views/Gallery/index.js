@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './style.css'
 import PostsGallery from '../../Components/PostGallery/PostsGallery.js'
 import { Switch, Route, useRouteMatch, } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter , useHistory} from 'react-router-dom';
 import PostCard from '../../Components/PostCard/PostCard';
 import PostComplete from '../../Components/PostComplete/PostComplete';
 import Loading from '../../Components/Loading/Loading';
@@ -12,12 +12,20 @@ function Gallery(prop) {
 
     let [actualStateSearch, setActualStateSearch] = useState("likes");
     const match = useRouteMatch();
+    const history = useHistory();
+
+
+    function changeSearchMethod(method){
+
+        history.replace(`app/posts/search/tags/{}`)
+
+    }
 
     return (
         <div id="gallery-page">
 
             {/* <Switch> */}
-            <Route path={`${match.path}`}>
+            <Route  path={`${match.path}/posts`}>
                 <div id="top-options">
                     <div id="search-options-gallery">
                         Sort by: {actualStateSearch}
@@ -30,12 +38,12 @@ function Gallery(prop) {
                 <Switch  >
                     <div id="gallery-view">
 
-                        <Route exact path={`${match.path}`}  >
+                        <Route exact path={`${match.path}/posts`}  >
                             {"Normal  Mode " + `${match.path}/search/:tags`}
                             <PostsGallery apiLink={`post/?mode=${actualStateSearch}`} search={false} />
                         </Route>
                         {"oi"}
-                        <Route path={`${match.url}/search/:tags`}>
+                        <Route  exact path={`${match.url}/posts/search/:tags/sort/:mode`}>
                             {"Search Mode Tags"}
                             <PostsGallery apiLink={`/posts/search/tags/`} search={true} />
                         </Route>
@@ -44,7 +52,7 @@ function Gallery(prop) {
                 </Switch>
 
             </Route>
-            <Route path={`${match.path}/post/:postId`} >
+            <Route exact path={`${match.path}/post/:postId`} >
                 <div id="post-complete-view">
                     <PostComplete ></PostComplete>
 

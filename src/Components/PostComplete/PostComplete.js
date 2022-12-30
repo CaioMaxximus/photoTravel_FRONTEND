@@ -5,6 +5,8 @@ import api from "../../resources/api.js"
 import Loading from "../Loading/Loading";
 import { useEffect } from "react";
 import './style.css';
+
+const likeLogo = require("../../assets/icons/favorite_FILL0_wght400_GRAD0_opsz48.svg")
 export default function PostComplete() {
 
     // const id = useLocation().pathname.split("/")[3];
@@ -29,7 +31,7 @@ export default function PostComplete() {
             { headers: { "Authorization": `Bearer ${token}` } }).
             then((res) => {
                 let $btn = document.getElementById("post-like-btn")
-                $btn.style.backgroundColor = "blue";
+                $btn.style.backgroundColor = "red";
                 console.log(res.data)
 
             }).catch(e =>{
@@ -61,10 +63,10 @@ export default function PostComplete() {
                     <img src={post.imageUrl} alt="" />
                 </div>
                 <div id="post-user-likes">
-                    <div ><span id="post-num-likes">{numLikes}</span> LIKES</div>
+                    <div id="container-likes" ><span id="post-num-likes">{numLikes}</span> LIKES</div>
                     <div id="post-like-btn">
                         <button onClick={() => { like() }}>
-                            LIKE
+                            <img src={likeLogo} alt="" />
                         </button>
                     </div>
                 </div>

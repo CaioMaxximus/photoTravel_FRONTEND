@@ -43,7 +43,7 @@
     grid-template-columns: 1fr 4fr 2fr;
     position:relative ;
 
-    background-color: var(--color60);
+    background-color: none;
     border: solid 1px black;
     /* box-shadow: 0px 1px 4px; */
     /* font-family: 'Roboto Mono', monospace; */
@@ -66,7 +66,7 @@
 #search-bar {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 7fr;
+    grid-template-columns: 1fr 2fr 7fr;
     height: 100%;
     width: 100%;
     margin: 0 auto;
@@ -133,7 +133,7 @@
     height: auto;
     margin: 0;
     color: black;
-    background-color: var(--color60);
+    background-color: transparent;
     font-size: 1rem;
     border: none;
 
@@ -229,7 +229,7 @@ nav {
 
 
 .menu button {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: var(--font-menu-button);
     font-size: 1rem;
     background-color: var(--color30);
     border: 1px solid var(--color10);
@@ -245,7 +245,7 @@ nav {
     width : 90%
 }
 .menu button:hover {
-    background-color: var(--color30);
+    background-color: var(--color10);
     color: var(--color60);
     border: 2px solid var(--color10);
     opacity: 1;

@@ -1,28 +1,28 @@
-import React  from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Link , useRouteMatch } from 'react-router-dom';
+import { Link, useRouteMatch } from 'react-router-dom';
 import './style.css'
+const heartIcon = require('../../assets/icons/6166.jpg')
 
-export default function PostCard(props){
+export default function PostCard(props) {
 
     console.log(props)
-    const {imageUrl , nickname , numLikes, id} = props.props;
+    const { imageUrl, ownerUser, numLikes, id } = props.props;
     console.log(props.props);
     console.log(imageUrl);
+    console.log(ownerUser)
     const match = useRouteMatch();
     // const name_id = `post-card-${id}`
 
 
-    return  <div className = "post_card">
+    return <div className="post_card">
         <header>
-            <div>
-                <p>{numLikes}</p>
-            </div>
+                <p>{numLikes}</p><img src={heartIcon}></img>
         </header>
-        <Link to = {`/app/gallery/post/${id}`} replace = {true}
-            onClick = {() =>{setTimeout(() => {window.location.reload()},1) }}
-        ><img src= {imageUrl} />
+        <Link to={`/app/gallery/post/${id}`} replace={true}
+            onClick={() => { setTimeout(() => { window.location.reload() }, 1) }}
+        ><img src={imageUrl} />
         </  Link>
-        <footer>by : {nickname}</footer>
+        <footer><p>by : {ownerUser}</p> </footer>
     </div>
 }

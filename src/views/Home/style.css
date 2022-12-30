@@ -51,10 +51,20 @@
     width: 100%;
     text-align: center;
 }
+/* .content-section {
+    background-color: var(--color60);
+} */
 
-.profile-content #user-perfil-description{
-
+.content-section h3{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    border-bottom: 1px black solid;
+    font-size: larger;
 }
+
+#user-posts-gallery{
+    }
 /* .content h3{
     font : 4.5rem/6.3rem bold serif;
 } */

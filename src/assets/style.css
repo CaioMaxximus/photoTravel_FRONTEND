@@ -1,4 +1,4 @@
-:root{
+:root {
     /* --color-primary-button: #1a1d1a;
     --color-secundary-button : #f0efef;
     --color-primary-panel : #d6caca;
@@ -12,26 +12,35 @@
     --color-lighter-blue : #57B5D2;
     --color-darker-blue: #00809B ;
     --color-midle-gray : #00809B; */
-    --color30 : #d25516;
-    --color-midle-dark : #12405a;
-    --color : #157293;
-    --color60 : #27a4d4 ;
-    --color-ligther : #20dad8;
-    --color10 : #efefef;
-    --color-background-app : #efefef;
-    --color-gallery-background : #00074a
-}   
+    --color30: #d25516;
+    --color30-low-opacity: #d255168c;
+    --color-midle-dark: #12405a;
+    --color: #157293;
+    --color60: #b5175c;
+    --color10-low-opacity: #efefef7a;
+    --color-ligther: #20dad8;
+    --color10: #efefef;
+    --color-background-app: #12405a;
+    --color-gallery-background: #00074a;
+    --font-menu-button : Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* --font-title :  */
+    --font-subtitle : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --font-size-subtitles : 1.2rem;
 
-body{
-    background-color: var(--color-background-app);
 }
 
-body , #root{ 
-    margin :0;
-    padding: 0 ;
+/* body {
+    background-color: var(--color-midle-dark);
+} */
+
+body, #root {
+    margin: 0;
+    padding: 0;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
+
 html, body, div, img {
     margin: 0;
     padding: 0;
@@ -41,13 +50,12 @@ html, body, div, img {
     vertical-align: baseline;
 }
 
-p{
-    font: 32px sans-serif 300 ;
+p {
+    font: 32px sans-serif 300;
 }
 
 textarea:focus, input:focus, select:focus {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
-} 
-
+}

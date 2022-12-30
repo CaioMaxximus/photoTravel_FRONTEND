@@ -1,52 +1,61 @@
-#login-screen{
+#login-screen {
     display: flex;
     flex-direction: column;
-    border: solid 2px black;
-    border-radius: 8px ;
-    margin : 0 auto;
-    width : 20rem;
-    height: 70vh;
+    border: solid 2px var(--color30);
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 20rem;
+    margin-top: 5rem;
+    height: 30vh;
     max-width: 300px;
     min-height: 300px;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--color10);
 
 }
 
-#login-screen .form-user-area{
+#login-screen .form-user-area {
     display: flex;
     flex-direction: column;
-    column-gap: 4em;
+    row-gap: 2em;
     width: 80%;
-    margin-top : 2rem;
+    margin-top: 2rem;
     align-items: center;
     justify-content: center;
     height: 80%;
 }
 
-#login-screen .form-user-area label{
+/* #login-screen .form-user-area label{
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     margin: 8px 0 ;
-}
+} */
 
-#login-screen .form-user-area input{
-    border: solid 1px black;
+#login-screen .form-user-area input {
+    border: solid 1px var(--color60);
     border-radius: 8px;
     margin-bottom: 5px;
-    color: rgb(120, 121, 122);
+    height: 2rem;
+    color: var(--color10);
+
+    background-color: var(--color60);
     box-shadow: rgb(120, 121, 122) 0px 5px 5px;
     width: 100%;
 
 }
 
-#login-screen .form-user-area button{
-    margin-top: 1.5em;
+#login-screen .form-user-area button {
+    margin-top: 1.2em;
     width: 50%;
     border-radius: 4px;
-    background-color: none;
     border: solid 1px black;
-    
+    color: var(--color10);
+    background-color: var(--color30);
+    height: 2rem;;
 }
-
-
+#login-screen .form-user-area button:hover {
+    background-color: var(--color60);
+    border: 2px solid var(--color30);
+    cursor: pointer;
+} 

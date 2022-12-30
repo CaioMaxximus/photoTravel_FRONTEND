@@ -19,8 +19,9 @@ class PostsGallery extends Component {
         if(search){
             console.log(this.props)
             let tags  = this.props.match.params.tags;
+            let methodSearch = this.props.match.params.method
             let tagsSearch = tags.split("%").join(" ");
-            api.get(`${this.props.apiLink}${tagsSearch}`).then(
+            api.get(`${this.props.apiLink}${tagsSearch}/${methodSearch}`).then(
                 r =>{
                     this.setState({posts: r.data})
                 }
@@ -69,4 +70,4 @@ class PostsGallery extends Component {
 
 }
 
-export default withRouter(PostsGallery);
+export default withRouter(PostsGallery); 
